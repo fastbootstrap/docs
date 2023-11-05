@@ -1,0 +1,11 @@
+<link href="https://cdn.jsdelivr.net/npm/fastbootstrap@2.0.0/dist/css/fastbootstrap.min.css" rel="stylesheet" integrity="sha256-EkS1lBVeD1Dv7HGBICgtEPKeIz4ffoKbo5gRiPvD6/8=" crossorigin="anonymous">
+
+{{ $targetCssPath := "/css/site.css" }}
+{{ $sassOptions := dict "targetPath" $targetCssPath "outputStyle" "expanded" "precision" 6 }}
+{{ if hugo.IsProduction }}
+  {{ $sassOptions = merge $sassOptions (dict "outputStyle" "compressed") }}
+{{ end }}
+{{ $style := resources.Get "scss/site.scss" | toCSS $sassOptions | fingerprint }}
+<link href="{{ $style.RelPermalink }}" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />

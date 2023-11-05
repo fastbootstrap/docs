@@ -1,0 +1,7 @@
+{
+  "name": "fastbootstrap-docs",
+  "version": "0.1.0",
+  "devDependencies": {
+    "fastbootstrap": "^2.0.0"
+  }
+}

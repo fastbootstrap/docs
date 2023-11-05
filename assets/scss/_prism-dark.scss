@@ -1,0 +1,6 @@
+@include color-mode(dark, true) {
+  pre[class*="language-"] {
+    background-color: $dark-neutral-200;
+    color: $dark-neutral-1000;
+  }
+}

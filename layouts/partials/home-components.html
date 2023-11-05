@@ -1,0 +1,98 @@
+<div class="alert alert-success alert-dismissible"><i class="fa-solid fa-circle-check text-success me-3"></i>Check out this library!
+    <button type="button" class="btn-close btn-close-sm pe-none" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<div class="my-5 d-flex flex-column flex-lg-row align-items-start justify-content-end gap-4 gap-lg-6">
+    <div class="col-12 col-lg-5 d-flex flex-column justify-content-end pb-2">
+        <div class="my-3 d-flex align-items-center justify-content-end gap-3">
+            <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Hello Bootstrap!">Tooltip</a>
+            <span class="badge text-bg-success">5K</span>
+        </div>
+        <div class="my-4 d-flex align-items-center justify-content-end">
+            <input class="form-check-input me-3" type="checkbox" value="" checked />
+            <div class="form-check form-switch form-switch-lg d-inline-block">
+                <input class="form-check-input" type="checkbox" role="switch" />
+            </div>
+            <div class="form-check form-switch form-switch-lg d-inline-block">
+                <input class="form-check-input" type="checkbox" role="switch" checked />
+            </div>
+        </div>
+        <div class="text-end">
+            <div class="btn-group btn-group-narrow" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="{{.id_prefix}}btnradio" id="{{.id_prefix}}btnradio1"
+                    autocomplete="off" checked />
+                <label class="btn btn-default" for="{{.id_prefix}}btnradio1"><i
+                        class="fa-solid fa-align-left"></i></label>
+                <input type="radio" class="btn-check" name="{{.id_prefix}}btnradio" id="{{.id_prefix}}btnradio2"
+                    autocomplete="off" />
+                <label class="btn btn-default" for="{{.id_prefix}}btnradio2"><i
+                        class="fa-solid fa-align-center"></i></label>
+                <input type="radio" class="btn-check" name="{{.id_prefix}}btnradio" id="{{.id_prefix}}btnradio3"
+                    autocomplete="off" />
+                <label class="btn btn-default" for="{{.id_prefix}}btnradio3"><i
+                        class="fa-solid fa-align-right"></i></label>
+                <input type="radio" class="btn-check" name="{{.id_prefix}}btnradio" id="{{.id_prefix}}btnradio4"
+                    autocomplete="off" />
+                <label class="btn btn-default" for="{{.id_prefix}}btnradio4"><i
+                        class="fa-solid fa-align-justify"></i></label>
+            </div>
+        </div>
+        <div class="my-4 text-end">
+            <button class="btn btn-primary" type="button">Button A</button>
+            <button class="btn btn-link">Button link</button>
+        </div>
+        <div class="d-flex justify-content-end align-items-center gap-4">
+                <div class="progress d-inline-flex w-50">
+                    <div class="progress-bar bg-success w-75" role="progressbar"></div>
+                </div>
+                <span class="fs-sm text-body-tertiary ms-2">4 of 6</span>
+        </div>
+    </div>
+    <div class="col-12 col-lg-7">
+        <ul class="list-group border w-100">
+            <li class="list-group-item d-flex justify-content-between align-items-center border-bottom py-3">
+                <div class="d-flex align-items-center">
+                    <img class="avatar avatar-lg" src="/images/avatar/1.jpg" alt="" />
+                    <div class="ms-3 fs-sm">
+                        <p class="fw-semibold mb-0">John Doe</p>
+                        <p class="text-muted mb-0 fs-sm">@hotmail</p>
+                    </div>
+                </div>
+                <button class="btn btn-outline-primary btn-sm" type="button">View</button>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center border-bottom py-3">
+                <div class="d-flex align-items-center">
+                    <img class="avatar avatar-lg" src="/images/avatar/3.jpg" alt="" />
+                    <div class="ms-3 fs-sm">
+                        <p class="fw-semibold mb-0">Alex Ray</p>
+                        <p class="text-muted mb-0">@gmail</p>
+                    </div>
+                </div>
+                <button class="btn btn-outline-primary btn-sm" type="button">View</button>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center border-bottom py-3">
+                <div class="d-flex align-items-center">
+                    <img class="avatar avatar-lg" src="/images/avatar/5.jpg" alt="" />
+                    <div class="ms-3 fs-sm">
+                        <p class="fw-semibold mb-0">Kate Hunington</p>
+                        <p class="text-muted mb-0 fs-sm">@example</p>
+                    </div>
+                </div>
+                <button class="btn btn-outline-primary btn-sm" type="button">View</button>
+            </li>
+            <li class="list-group-item d-flex justify-content-center align-items-center">
+                <a href="#" class="btn btn-link">View All</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="d-flex gap-3 justify-content-around" novalidate>
+    <div class="">
+        <input type="text" class="form-control is-invalid pe-none" placeholder="Invalid" /> 
+     </div>
+    <div>
+        <input type="text" class="form-control is-valid pe-none" placeholder="Valid" />
+    </div>
+</div>
+<div class="mt-4 mt-lg-6 d-inline-flex">
+    <input type="range" class="form-range pe-none" id="{{.id_prefix}}customRange1" value="32" style="--track-fg-width:32%" />
+</div>

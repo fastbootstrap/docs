@@ -1,0 +1,534 @@
+<!doctype html><html lang=en><head><meta name=generator content="Hugo 0.118.2"><meta http-equiv=x-ua-compatible content="IE=edge"><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" href=/favicon.ico type=image/x-icon><link href=https://cdn.jsdelivr.net/npm/fastbootstrap@2.0.0/dist/css/fastbootstrap.min.css rel=stylesheet integrity="sha256-EkS1lBVeD1Dv7HGBICgtEPKeIz4ffoKbo5gRiPvD6/8=" crossorigin=anonymous><link href=/css/site.c3d631c036793bd75bdc2d4fd7b2efa8e8f1d1df82155ca949b044c3d6a322ad.css rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css><title>Bootstrap Dropdown Component - Examples & Tutorial - FastBootstrap Theme</title><meta name=description content="Dropdown displays a list of actions or options allows the user to select one."></head><body><header class="navbar navbar-expand-lg py-0 sticky-top bd-navbar"><nav class="container-fluid px-md-3 px-lg-4"><a class="navbar-brand d-inline-flex align-items-center m-0 p-0 me-lg-6 me-xl-9 p-1 rounded text-reset" href=/><span class=text-primary><svg fill="currentcolor" width="24" height="24" viewBox="0 0 32 32"><rect x="4" y="3" width="24" height="7" rx="3.5" ry="3.5"/><rect x="4" y="12" width="20" height="7" rx="3.5" ry="3.5"/><rect x="4" y="21" width="14" height="7" rx="3.5" ry="3.5"/></svg></span><h2 class="d-none d-md-block fw-semibold fs-5 ls-wide ms-2 mb-0">FastBootstrap</h2></a><div class="collapse navbar-collapse"><ul class="navbar-nav navbar-nav-underline ps-lg-5 flex-grow-1"><li class=nav-item><a class=nav-link href=/get-started>Get Started</a></li><li class=nav-item><a class=nav-link href=/tokens>Tokens</a></li><li class=nav-item><a class=nav-link href=/docs>Docs</a></li><li class=nav-item><a class="nav-link active" href=/components>Components</a></li></ul></div><div class="d-flex align-items-center ms-auto gap-3 me-2 me-lg-3"><div class=position-relative><button class="btn border-0" id=bd-theme type=button data-bs-toggle=dropdown data-reference=parent aria-expanded=false><i class="fa-solid fa-circle-half-stroke fa-lg"></i></button><ul class="dropdown-menu dropdown-menu-end" role=menu><li><button class=dropdown-item type=button id=light-theme-button data-bs-theme-value=light><i class="fa-solid fa-sun fa-lg"></i><span class=ms-2>Light</span></button></li><li><button class=dropdown-item type=button id=dark-theme-button data-bs-theme-value=dark><i class="fa-solid fa-moon fa-lg"></i><span class=ms-2>Dark</span></button></li></ul></div><button id=search-button class="bg-transparent fs-sm text-body-secondary rounded-2 border border-2 bd-w-56 text-start py-1 ps-2 d-none d-lg-block" type=button data-bs-toggle=modal data-bs-target=#searchModal><svg class="me-1" width="16" height="16" viewBox="0 0 24 24" role="presentation"><path d="M16.436 15.085l3.94 4.01a1 1 0 01-1.425 1.402l-3.938-4.006a7.5 7.5.0 111.423-1.406zM10.5 16a5.5 5.5.0 100-11 5.5 5.5.0 000 11z" fill="currentcolor" fill-rule="evenodd"/></svg>
+<span>Search</span></button>
+<button class="btn d-lg-none" type=button data-bs-toggle=modal data-bs-target=#searchModal><svg width="24" height="24" viewBox="0 0 24 24" role="presentation"><path d="M16.436 15.085l3.94 4.01a1 1 0 01-1.425 1.402l-3.938-4.006a7.5 7.5.0 111.423-1.406zM10.5 16a5.5 5.5.0 100-11 5.5 5.5.0 000 11z" fill="currentcolor" fill-rule="evenodd"/></svg></button>
+<a class="nav-link d-none d-lg-block" href=https://github.com/fastbootstrap/atlassian-design-for-bootstrap title="Github repository" target=_blank rel=nofollow><i class="fa-brands fa-github fa-xl"></i></a>
+<button class=navbar-toggler type=bdNavbar data-bs-toggle=offcanvas data-bs-target=#bdNavbar aria-controls=bdNavbar aria-label="Toggle navigation"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentcolor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 11.5A.5.5.0 013 11h10a.5.5.0 010 1H3a.5.5.0 01-.5-.5zm0-4A.5.5.0 013 7h10a.5.5.0 010 1H3a.5.5.0 01-.5-.5zm0-4A.5.5.0 013 3h10a.5.5.0 010 1H3a.5.5.0 01-.5-.5z"/></svg></button></div></nav></header><div class="offcanvas offcanvas-end w-100 mw-100" tabindex=-1 id=bdNavbar><div class="offcanvas-header border-bottom px-5"><span class=text-primary><svg fill="currentcolor" width="24" height="24" viewBox="0 0 32 32"><rect x="4" y="3" width="24" height="7" rx="3.5" ry="3.5"/><rect x="4" y="12" width="20" height="7" rx="3.5" ry="3.5"/><rect x="4" y="21" width="14" height="7" rx="3.5" ry="3.5"/></svg></span><button type=button class=btn-close data-bs-dismiss=offcanvas aria-label=Close></button></div><div class="offcanvas-body px-5"><div class="d-flex flex-column"><a class="py-2 fw-bold text-reset" href=/>Home</a>
+<a class="py-2 fw-bold text-reset" href=/get-started>Get Started</a><a class="py-2 fw-bold text-reset" href=/tokens>Tokens</a><a class="py-2 fw-bold text-reset" href=/docs>Docs</a><a class="py-2 fw-bold text-reset" href=/components>Components</a></div><ul class="list-inline mt-3 text-center border-top pt-5"><li><a class="nav-link rounded-circle" data-bs-toggle=tooltip data-bs-title="Github repository" href=https://github.com/fastbootstrap/atlassian-design-for-bootstrap><i class="fa-brands fa-github fa-xl"></i></a></li></ul></div></div><ul class="dropdown-menu dropdown-menu-end" role=menu><li><button class=dropdown-item type=button id=light-theme-button data-bs-theme-value=light><i class="fa-solid fa-sun fa-lg"></i><span class=ms-2>Light</span></button></li><li><button class=dropdown-item type=button id=dark-theme-button data-bs-theme-value=dark><i class="fa-solid fa-moon fa-lg"></i><span class=ms-2>Dark</span></button></li></ul><div class="modal fade" tabindex=-1 id=searchModal aria-hidden=true><div class="modal-dialog modal-dialog-scrollable"><div class=modal-content><div class="modal-header px-3 py-2"><div class="input-group input-group-start"><input type=text id=search-input name=search-input class="form-control bg-transparent py-3" placeholder="Search documents">
+<label class=input-group-text><i class="fa-solid fa-magnifying-glass fa-sm text-muted"></i></label><div id=searchLoading class="position-absolute top-50 end-0 translate-middle visually-hidden me-3"><i class="animate-spin text-primary fas fa-spinner"></i></div></div></div><div class="modal-body p-3 pt-0"></div></div></div></div><div class=bd-layout><aside class="bd-sidebar border-end"><div class=sidebar><div class="d-flex d-lg-none align-items-center"><div class=container><div class="d-flex justify-content-between align-items-center py-3"><nav aria-label=breadcrumb><ol class="breadcrumb mb-0"><li class=breadcrumb-item><a href=/>Home</a></li><li class=breadcrumb-item><a href=/components/>Components</a></li><li class="breadcrumb-item active" aria-current=page>Dropdown</li></ol></nav><button class="btn btn-sm p-0 border-0" data-bs-toggle=collapse href=#sidebar-nav aria-expanded=false><i class="fas fa-chevron-down"></i></button></div></div></div><div class="collapse d-lg-block py-3 py-lg-4" id=sidebar-nav><div class="sidebar__section-heading d-block my-2 fw-semibold text-capitalize ls-wider fs-sm">Actions</div><ul class=list-unstyled><li><a href=/components/button/ class="sidebar__link d-flex justify-content-between">Button</a></li><li><a href=/components/button-group/ class="sidebar__link d-flex justify-content-between">Button Group</a></li><li><a href=/components/close-button/ class="sidebar__link d-flex justify-content-between">Close Button</a></li></ul><div class="sidebar__section-heading d-block my-2 fw-semibold text-capitalize ls-wider fs-sm">Inputs</div><ul class=list-unstyled><li><a href=/components/checkbox/ class="sidebar__link d-flex justify-content-between">Checkbox</a></li><li><a href=/components/dropdown/ class="sidebar__link d-flex justify-content-between active">Dropdown</a></li><li><a href=/components/floating-label/ class="sidebar__link d-flex justify-content-between">Floating Label</a></li><li><a href=/components/form/ class="sidebar__link d-flex justify-content-between">Form</a></li><li><a href=/components/input-group/ class="sidebar__link d-flex justify-content-between">Input Group</a></li><li><a href=/components/radio/ class="sidebar__link d-flex justify-content-between">Radio Group</a></li><li><a href=/components/range/ class="sidebar__link d-flex justify-content-between">Range slider</a></li><li><a href=/components/select/ class="sidebar__link d-flex justify-content-between">Select Input</a></li><li><a href=/components/switch/ class="sidebar__link d-flex justify-content-between">Switch</a></li><li><a href=/components/textfield/ class="sidebar__link d-flex justify-content-between">Text field</a></li></ul><div class="sidebar__section-heading d-block my-2 fw-semibold text-capitalize ls-wider fs-sm">navigation</div><ul class=list-unstyled><li><a href=/components/breadcrumb/ class="sidebar__link d-flex justify-content-between">Breadcrumb</a></li><li><a href=/components/navbar/ class="sidebar__link d-flex justify-content-between">Navbar</a></li><li><a href=/components/offcanvas/ class="sidebar__link d-flex justify-content-between">Offcanvas</a></li><li><a href=/components/pagination/ class="sidebar__link d-flex justify-content-between">Pagination</a></li><li><a href=/components/pills/ class="sidebar__link d-flex justify-content-between">Pills</a></li><li><a href=/components/scrollspy/ class="sidebar__link d-flex justify-content-between">Scrollspy</a></li><li><a href=/components/tabs/ class="sidebar__link d-flex justify-content-between">Tabs</a></li></ul><div class="sidebar__section-heading d-block my-2 fw-semibold text-capitalize ls-wider fs-sm">Feedback</div><ul class=list-unstyled><li><a href=/components/alerts/ class="sidebar__link d-flex justify-content-between">Alerts</a></li><li><a href=/components/modal/ class="sidebar__link d-flex justify-content-between">Modal</a></li><li><a href=/components/placeholders/ class="sidebar__link d-flex justify-content-between">Placeholders</a></li><li><a href=/components/popover/ class="sidebar__link d-flex justify-content-between">Popover</a></li><li><a href=/components/progress-bar/ class="sidebar__link d-flex justify-content-between">Progress bar</a></li><li><a href=/components/spinner/ class="sidebar__link d-flex justify-content-between">Spinner</a></li><li><a href=/components/toast/ class="sidebar__link d-flex justify-content-between">Toast</a></li><li><a href=/components/tooltip/ class="sidebar__link d-flex justify-content-between">Tooltip</a></li><li><a href=/components/validation/ class="sidebar__link d-flex justify-content-between">Validation</a></li></ul><div class="sidebar__section-heading d-block my-2 fw-semibold text-capitalize ls-wider fs-sm">Data Display</div><ul class=list-unstyled><li><a href=/components/avatar/ class="sidebar__link d-flex justify-content-between">Avatar<span class="lozenge me-2 me-lg-4 text-uppercase fw-medium fs-xs new">new</span></a></li><li><a href=/components/avatar-group/ class="sidebar__link d-flex justify-content-between">Avatar Group<span class="lozenge me-2 me-lg-4 text-uppercase fw-medium fs-xs new">new</span></a></li><li><a href=/components/badge/ class="sidebar__link d-flex justify-content-between">Badge</a></li><li><a href=/components/table/ class="sidebar__link d-flex justify-content-between">Table</a></li></ul><div class="sidebar__section-heading d-block my-2 fw-semibold text-capitalize ls-wider fs-sm">surfaces</div><ul class=list-unstyled><li><a href=/components/accordion/ class="sidebar__link d-flex justify-content-between">Accordion</a></li><li><a href=/components/blankslates/ class="sidebar__link d-flex justify-content-between">Blankslate<span class="lozenge me-2 me-lg-4 text-uppercase fw-medium fs-xs new">new</span></a></li><li><a href=/components/card/ class="sidebar__link d-flex justify-content-between">Card</a></li><li><a href=/components/carousel/ class="sidebar__link d-flex justify-content-between">Carousel</a></li><li><a href=/components/collapse/ class="sidebar__link d-flex justify-content-between">Collapse</a></li><li><a href=/components/list-group/ class="sidebar__link d-flex justify-content-between">List Group</a></li></ul><div class="sidebar__section-heading d-block my-2 fw-semibold text-capitalize ls-wider fs-sm">Utilities</div><ul class=list-unstyled><li><a href=/components/figures/ class="sidebar__link d-flex justify-content-between">Figures</a></li><li><a href=/components/focus-ring/ class="sidebar__link d-flex justify-content-between">Focus ring</a></li><li><a href=/components/icon-link/ class="sidebar__link d-flex justify-content-between">Icon link</a></li><li><a href=/components/images/ class="sidebar__link d-flex justify-content-between">Images</a></li><li><a href=/components/layout/ class="sidebar__link d-flex justify-content-between">Layout<span class="lozenge me-2 me-lg-4 text-uppercase fw-medium fs-xs new">new</span></a></li><li><a href=/components/link/ class="sidebar__link d-flex justify-content-between">Link</a></li><li><a href=/components/stretched-link/ class="sidebar__link d-flex justify-content-between">Stretched Link</a></li></ul></div></div></aside><main class=bd-main><div class="bd-intro position-relative"><div class="bd-bg-light px-4 px-md-6 px-lg-10 px-xl-20"><div class="py-4 py-md-6 py-lg-10 py-xl-20"><div class="d-flex align-items-center gap-2"><h1 class="fw-semibold fs-2">Dropdown</h1></div><p class="mt-3 text-body-secondary">Dropdown displays a list of actions or options allows the user to select one.</p></div></div><div class="nav nav-tabs doc-tabs position-absolute bottom-0 start-0 end-0" role=tablist><div class="px-4 px-md-6 px-lg-10 px-xl-20"><div class="d-flex flex-row gap-3"><button class="btn nav-link active" data-bs-toggle=tab data-bs-target=#tabpanel-0 role=tab aria-selected=true>
+Overview</button>
+<button class="btn nav-link" data-bs-toggle=tab data-bs-target=#tabpanel-1 role=tab aria-selected=false>
+API</button></div></div></div></div><div class=tab-content id=tab-content><div class="tab-pane active" id=tabpanel-0 role=tabpanel><div class=bd-main-content><div class="bd-toc d-none d-xl-block py-8"><div class="doc-nav align-self-start d-none d-xl-flex flex-column fs-sm"><span class="fw-semibold fs-xs text-uppercase">Contents</span><div class="doc-nav-content position-relative mt-2" id=doc-nav-0><nav id=TableOfContents><ul><li><a href=#basic-dropdowns>Basic dropdowns</a><ul><li><a href=#single-buttons>Single buttons</a></li><li><a href=#split-buttons>Split buttons</a></li></ul></li><li><a href=#dropdown-hover-trigger>Dropdown hover trigger</a></li><li><a href=#colors>Colors</a></li><li><a href=#custom-arrow-icons>Custom arrow icons</a></li><li><a href=#sizes>Sizes</a></li><li><a href=#position>Position</a><ul><li><a href=#centered>Centered</a></li><li><a href=#dropup>Dropup</a></li><li><a href=#dropend>Dropend</a></li><li><a href=#dropstart>Dropstart</a></li><li><a href=#dropup-centered>Dropup centered</a></li></ul></li><li><a href=#custom-position>Custom position</a></li><li><a href=#dropdown-items>Dropdown items</a><ul><li><a href=#selectd-item>Selectd item</a></li><li><a href=#disabled-item>Disabled item</a></li></ul></li><li><a href=#menu-alignment>Menu alignment</a><ul><li><a href=#responsive-alignment>Responsive alignment</a></li><li><a href=#alignment-options>Alignment options</a></li></ul></li><li><a href=#menu-content>Menu content</a><ul><li><a href=#headers>Headers</a></li><li><a href=#dividers>Dividers</a></li><li><a href=#text>Text</a></li><li><a href=#forms>Forms</a></li></ul></li><li><a href=#auto-close>Auto close</a></li></ul></nav></div></div></div><div class="bd-content px-4 px-md-6 px-lg-10 px-xl-20 py-8" data-bs-spy=scroll data-bs-target=#doc-nav-0 data-bs-smooth-scroll=true tabindex=0><p><strong>Bootstrap 5 Dropdown menu component</strong></p><p>Responsive dropdown menu component built with the latest Bootstrap 5. Dropdown menu component displays a list of actions or options that the user can select one.</p><p>Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown plugin.</p><h2 id=basic-dropdowns>Basic dropdowns</h2><p>Dropdowns can be triggered from <code>&lt;a></code> or <code>&lt;button></code> elements to better fit your potential needs.</p><p>Wrap the dropdown’s toggle (your button or link) and the dropdown menu within <code>.dropdown</code>, or another element that declares <code>position: relative;</code>. Ideally, you should use a <code>&lt;button></code> element as the dropdown trigger, but the plugin will work with <code>&lt;a></code> elements as well. The examples shown here use semantic <code>&lt;ul></code> elements where appropriate, but custom markup is supported.</p><h3 id=single-buttons>Single buttons</h3><p>Any single <code>.btn</code> can be turned into a dropdown toggle with some markup changes. Here’s how you can put them to work with either <code>&lt;button></code> elements:</p><div class=bd-example><div class=dropdown><button class="btn btn-default dropdown-toggle" type=button data-bs-toggle=dropdown aria-expanded=false>
+Page actions</button><ul class=dropdown-menu role=menu><li><a class=dropdown-item href=#>Action</a></li><li><a class=dropdown-item href=#>Another action</a></li><li><a class=dropdown-item href=#>Something else here</a></li></ul></div></div><div class=position-relative><pre class=bd-code-snippet><code class=language-markup>&lt;div class=&#34;dropdown&#34;&gt;
+  &lt;button class=&#34;btn btn-default dropdown-toggle&#34; type=&#34;button&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;
+    Page actions
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34; role=&#34;menu&#34;&gt;
+    &lt;li&gt;
+      &lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div><p>While <code>&lt;button></code> is the recommended control for a dropdown toggle, there might be situations where you have to use an <code>&lt;a></code> element. If you do, we recommend adding a <code>role="button"</code> attribute to appropriately convey control’s purpose to assistive technologies such as screen readers.</p><div class=bd-example><div class=dropdown><a class="btn btn-default dropdown-toggle" href=# role=button data-bs-toggle=dropdown aria-expanded=false>Dropdown link</a><ul class=dropdown-menu><li><a class=dropdown-item href=#>Action</a></li><li><a class=dropdown-item href=#>Another action</a></li><li><a class=dropdown-item href=#>Something else here</a></li></ul></div></div><div class=position-relative><pre class=bd-code-snippet><code class=language-markup>&lt;div class=&#34;dropdown&#34;&gt;
+  &lt;a class=&#34;btn btn-default dropdown-toggle&#34; href=&#34;#&#34; role=&#34;button&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;
+    Dropdown link
+  &lt;/a&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div><h3 id=split-buttons>Split buttons</h3><p>Similarly, create split button dropdowns with virtually the same markup as single button dropdowns, but with the addition of <code>.dropdown-toggle-split</code> for proper spacing around the dropdown caret.</p><p>We use this extra class to reduce the horizontal <code>padding</code> on either side of the caret by 25% and remove the <code>margin-left</code> that’s added for regular button dropdowns. Those extra changes keep the caret centered in the split button and provide a more appropriately sized hit area next to the main button.</p><div class=bd-example><div class=btn-group-segmented><button type=button class="btn btn-default">Page actions</button>
+<button type=button class="btn btn-default dropdown-toggle dropdown-toggle-split" data-bs-toggle=dropdown aria-expanded=false>
+<span class=visually-hidden>Toggle Dropdown</span></button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Action</a></li><li><a class=dropdown-item href=#>Another action</a></li><li><a class=dropdown-item href=#>Something else here</a></li><li><hr class=dropdown-divider></li><li><a class=dropdown-item href=#>Separated link</a></li></ul></div></div><div class=position-relative><pre class=bd-code-snippet><code class=language-markup>&lt;div class=&#34;btn-group-segmented&#34;&gt;
+    &lt;button type=&#34;button&#34; class=&#34;btn btn-default&#34;&gt;Page actions&lt;/button&gt;
+    &lt;button 
+      type=&#34;button&#34; 
+      class=&#34;btn btn-default dropdown-toggle dropdown-toggle-split&#34; 
+      data-bs-toggle=&#34;dropdown&#34; 
+      aria-expanded=&#34;false&#34;
+    &gt;
+      &lt;span class=&#34;visually-hidden&#34;&gt;Toggle Dropdown&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&#34;dropdown-menu&#34;&gt;
+      &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;hr class=&#34;dropdown-divider&#34;&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div><h2 id=dropdown-hover-trigger>Dropdown hover trigger</h2><p><span class="lozenge new fs-sm">New Feature</span></p><p>The dropdown default trigger mode is click, you can auto-open dropdown menu when mouse hover it via adding <code>.dropdown-hover</code> to the dropdown.</p><section class="alert alert-info my-5" role=alert><div class="d-flex gap-4"><span><i class="fa-solid fa-circle-info icon-info fa-lg"></i></span><div>This is implemented by the pure CSS not plugin API, you don&rsquo;t need to add the <code>data-bs-toggle="dropdown"</code> attribute to the button.</div></div></section><div class=bd-example><div class="dropdown dropdown-hover"><a class="btn btn-default dropdown-toggle" href=# role=button>Hover me</a><ul class=dropdown-menu role=menu><li><a class=dropdown-item href=#>Action</a></li><li><a class=dropdown-item href=#>Another action</a></li><li><a class=dropdown-item href=#>Something else here</a></li></ul></div></div><div class=position-relative><pre class=bd-code-snippet><code class=language-markup>&lt;div class=&#34;dropdown dropdown-hover&#34;&gt;
+  &lt;a class=&#34;btn btn-default dropdown-toggle&#34; href=&#34;#&#34; role=&#34;button&#34;&gt;
+    Hover me 
+  &lt;/a&gt;
+  &lt;ul class=&#34;dropdown-menu&#34; role=&#34;menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div><p>The dropdown will show up when hovering the button.</p><h2 id=colors>Colors</h2><p>You can do this with any button variant in <code>.btn-{color}</code>.</p><div class="bd-example d-flex gap-2 flex-wrap align-items-start"><div class=btn-group><button type=button class="btn btn-primary dropdown-toggle" data-bs-toggle=dropdown aria-expanded=false>
+Primary</button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Action</a></li><li><a class=dropdown-item href=#>Another action</a></li><li><a class=dropdown-item href=#>Something else here</a></li><li><hr class=dropdown-divider></li><li><a class=dropdown-item href=#>Separated link</a></li></ul></div><div class=btn-group><button type=button class="btn btn-success dropdown-toggle" data-bs-toggle=dropdown aria-expanded=false>
+Success</button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Action</a></li><li><a class=dropdown-item href=#>Another action</a></li><li><a class=dropdown-item href=#>Something else here</a></li><li><hr class=dropdown-divider></li><li><a class=dropdown-item href=#>Separated link</a></li></ul></div><div class=btn-group><button type=button class="btn btn-info dropdown-toggle" data-bs-toggle=dropdown aria-expanded=false>
+Info</button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Action</a></li><li><a class=dropdown-item href=#>Another action</a></li><li><a class=dropdown-item href=#>Something else here</a></li><li><hr class=dropdown-divider></li><li><a class=dropdown-item href=#>Separated link</a></li></ul></div><div class=btn-group><button type=button class="btn btn-warning dropdown-toggle" data-bs-toggle=dropdown aria-expanded=false>
+Waring</button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Action</a></li><li><a class=dropdown-item href=#>Another action</a></li><li><a class=dropdown-item href=#>Something else here</a></li><li><hr class=dropdown-divider></li><li><a class=dropdown-item href=#>Separated link</a></li></ul></div><div class=btn-group><button type=button class="btn btn-danger dropdown-toggle" data-bs-toggle=dropdown aria-expanded=false>
+Danger</button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Action</a></li><li><a class=dropdown-item href=#>Another action</a></li><li><a class=dropdown-item href=#>Something else here</a></li><li><hr class=dropdown-divider></li><li><a class=dropdown-item href=#>Separated link</a></li></ul></div><div class=btn-group><button type=button class="btn btn-dark dropdown-toggle" data-bs-toggle=dropdown aria-expanded=false>
+Dark</button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Action</a></li><li><a class=dropdown-item href=#>Another action</a></li><li><a class=dropdown-item href=#>Something else here</a></li><li><hr class=dropdown-divider></li><li><a class=dropdown-item href=#>Separated link</a></li></ul></div><div class="btn-group shadow-0"><button type=button class="btn btn-light dropdown-toggle" data-bs-toggle=dropdown aria-expanded=false>
+Light</button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Action</a></li><li><a class=dropdown-item href=#>Another action</a></li><li><a class=dropdown-item href=#>Something else here</a></li><li><hr class=dropdown-divider></li><li><a class=ropdown-divider></li><li><a class=dropdown-item href=#>Separated link</a></li></ul></div></div><div class=position-relative><pre class=bd-code-snippet><code class=language-markup>&lt;div class=&#34;btn-group&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-primary dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;
+    Primary
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;hr class=&#34;dropdown-divider&#34; /&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;btn-group&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-success dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;
+    Success
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;hr class=&#34;dropdown-divider&#34; /&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;btn-group&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-info dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;
+    Info
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;hr class=&#34;dropdown-divider&#34; /&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;btn-group&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-warning dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;
+    Waring
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;hr class=&#34;dropdown-divider&#34; /&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;btn-group&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-danger dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;
+    Danger
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;hr class=&#34;dropdown-divider&#34; /&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;btn-group&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-dark dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;
+    Dark
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;hr class=&#34;dropdown-divider&#34; /&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;btn-group shadow-0&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-light dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;
+    Light
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;hr class=&#34;dropdown-divider&#34; /&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;ropdown-divider&#34; /&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div><h2 id=custom-arrow-icons>Custom arrow icons</h2><p>Replace the default arrow icon with a custom icon. Just remove the <code>.dropdown-toggle</code> class and adds an icons onto the button. You also can use the <code>margin</code> or <code>flex</code> help classes for alignment if you need.</p><div class=bd-example><button type=button class="btn btn-default" data-bs-toggle=dropdown aria-expanded=false>
+Page actions <i class="fas fa-angle-down ms-2"></i></button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Action</a></li><li><a class=dropdown-item href=#>Action two</a></li><li><a class=dropdown-item href=#>Action three</a></li></ul><div class=btn-group-segmented><button type=button class="btn btn-default">Page actions</button>
+<button type=button class="btn btn-default dropdown-toggle-split" data-bs-toggle=dropdown aria-expanded=false><i class="fa-solid fa-ellipsis"></i></button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Action</a></li><li><a class=dropdown-item href=#>Another action</a></li><li><a class=dropdown-item href=#>Something else here</a></li></ul></div></div><div class=position-relative><pre class=bd-code-snippet><code class=language-markup>&lt;button type=&#34;button&#34; class=&#34;btn btn-default&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;
+  Page actions &lt;i class=&#34;fas fa-angle-down ms-2&#34;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;ul class=&#34;dropdown-menu&#34;&gt;
+  &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action two&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action three&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;btn-group-segmented&#34;&gt;
+    &lt;button type=&#34;button&#34; class=&#34;btn btn-default&#34;&gt;Page actions&lt;/button&gt;
+    &lt;button 
+      type=&#34;button&#34; 
+      class=&#34;btn btn-default dropdown-toggle-split&#34; 
+      data-bs-toggle=&#34;dropdown&#34; 
+      aria-expanded=&#34;false&#34;
+    &gt;&lt;i class=&#34;fa-solid fa-ellipsis&#34;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;ul class=&#34;dropdown-menu&#34;&gt;
+      &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div><h2 id=sizes>Sizes</h2><p>Button dropdowns work with buttons of all sizes(<code>.btn-sm</code>,<code>.btn-lg</code>), including default and split dropdown buttons. Check out our <a href=/components/button/>button component</a> for how to usage.</p><div class="bd-example d-flex flex-wrap align-items-start gap-2"><div class=dropdown><button class="btn btn-default btn-sm dropdown-toggle" type=button data-bs-toggle=dropdown aria-expanded=false>
+Small button</button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Action</a></li><li><a class=dropdown-item href=#>Another action</a></li><li><a class=dropdown-item href=#>Something else here</a></li></ul></div><div class=dropdown><button class="btn btn-default btn-lg dropdown-toggle" type=button data-bs-toggle=dropdown aria-expanded=false>
+Large button</button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Action</a></li><li><a class=dropdown-item href=#>Another action</a></li><li><a class=dropdown-item href=#>Something else here</a></li></ul></div></div><div class=position-relative><pre class=bd-code-snippet><code class=language-markup>&lt;div class=&#34;dropdown&#34;&gt;
+  &lt;button class=&#34;btn btn-default btn-sm dropdown-toggle&#34; type=&#34;button&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;
+    Small button
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;dropdown&#34;&gt;
+  &lt;button class=&#34;btn btn-default btn-lg dropdown-toggle&#34; type=&#34;button&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;
+    Large button
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div><h2 id=position>Position</h2><h3 id=centered>Centered</h3><p>Make the dropdown menu centered below the toggle with <code>.dropdown-center</code> on the parent element.</p><div class=bd-example><div class=dropdown-center><button class="btn btn-default dropdown-toggle" type=button data-bs-toggle=dropdown aria-expanded=false>
+Centered</button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Action</a></li><li><a class=dropdown-item href=#>Action two</a></li><li><a class=dropdown-item href=#>Action three</a></li></ul></div></div><div class=position-relative><pre class=bd-code-snippet><code class=language-markup>&lt;div class=&#34;dropdown-center&#34;&gt;
+  &lt;button class=&#34;btn btn-default dropdown-toggle&#34; type=&#34;button&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;
+    Centered
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action two&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action three&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div><h3 id=dropup>Dropup</h3><p>Trigger dropdown menus above elements by adding <code>.dropup</code> to the parent element.</p><div class=bd-example><div class=dropup><button type=button class="btn btn-default dropdown-toggle" data-bs-toggle=dropdown aria-expanded=false>
+Dropup</button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Action</a></li><li><a class=dropdown-item href=#>Action two</a></li><li><a class=dropdown-item href=#>Action three</a></li></ul></div></div><div class=position-relative><pre class=bd-code-snippet><code class=language-markup>&lt;div class=&#34;dropup&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-default dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;
+    Dropup
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action two&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action three&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div><h3 id=dropend>Dropend</h3><p>Trigger dropdown menus at the right of the elements by adding <code>.dropend</code> to the parent element.</p><div class=bd-example><div class=dropend><button type=button class="btn btn-default dropdown-toggle" data-bs-toggle=dropdown aria-expanded=false>
+Dropend</button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Action</a></li><li><a class=dropdown-item href=#>Action two</a></li><li><a class=dropdown-item href=#>Action three</a></li></ul></div></div><div class=position-relative><pre class=bd-code-snippet><code class=language-markup>&lt;div class=&#34;dropend&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-default dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;
+    Dropend
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action two&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action three&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div><h3 id=dropstart>Dropstart</h3><p>Trigger dropdown menus at the left of the elements by adding <code>.dropstart</code> to the parent element.</p><div class=bd-example><div class=dropstart><button type=button class="btn btn-default dropdown-toggle" data-bs-toggle=dropdown aria-expanded=false>
+Dropstart</button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Action</a></li><li><a class=dropdown-item href=#>Action two</a></li><li><a class=dropdown-item href=#>Action three</a></li></ul></div></div><div class=position-relative><pre class=bd-code-snippet><code class=language-markup>&lt;div class=&#34;dropstart&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-default dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;
+    Dropstart
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action two&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action three&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div><h3 id=dropup-centered>Dropup centered</h3><p>You also can use the <code>.dropup</code> with <code>.dropup-center</code> toghter on the parent element to make he dropup menu centered.</p><div class=bd-example><div class="dropup-center dropup"><button class="btn btn-default dropdown-toggle" type=button data-bs-toggle=dropdown aria-expanded=false>
+Centered dropup</button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Action</a></li><li><a class=dropdown-item href=#>Action two</a></li><li><a class=dropdown-item href=#>Action three</a></li></ul></div></div><div class=position-relative><pre class=bd-code-snippet><code class=language-markup>&lt;div class=&#34;dropup-center dropup&#34;&gt;
+  &lt;button class=&#34;btn btn-default dropdown-toggle&#34; type=&#34;button&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;
+    Centered dropup
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action two&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action three&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div><h2 id=custom-position>Custom position</h2><p>Use <code>[data-bs-offset]</code> or <code>[data-bs-reference]</code> attribute to change the location of the dropdown.</p><div class="bd-example d-flex"><div class="dropdown me-3"><button type=button class="btn btn-default dropdown-toggle" data-bs-toggle=dropdown aria-expanded=false data-bs-offset=10,20>
+Offset (10,20)</button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Action</a></li><li><a class=dropdown-item href=#>Another action</a></li><li><a class=dropdown-item href=#>Something else here</a></li></ul></div><div class=btn-group><button type=button class="btn btn-default">Parent reference</button>
+<button type=button class="btn btn-default dropdown-toggle dropdown-toggle-split" data-bs-toggle=dropdown aria-expanded=false data-bs-reference=parent>
+<span class=visually-hidden>Toggle Dropdown</span></button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Action</a></li><li><a class=dropdown-item href=#>Another action</a></li><li><a class=dropdown-item href=#>Something else here</a></li></ul></div></div><div class=position-relative><pre class=bd-code-snippet><code class=language-markup>&lt;div class=&#34;dropdown me-3&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-default dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;
+   data-bs-offset=&#34;10,20&#34;&gt;
+    Offset (10,20)
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;btn-group&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-default&#34;&gt;Parent reference&lt;/button&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-default dropdown-toggle dropdown-toggle-split&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;
+   data-bs-reference=&#34;parent&#34;&gt;
+    &lt;span class=&#34;visually-hidden&#34;&gt;Toggle Dropdown&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div><h2 id=dropdown-items>Dropdown items</h2><p>You can use <code>&lt;a></code> or <code>&lt;button></code> elements as dropdown items.</p><div class=bd-example><div class=dropdown><button class="btn btn-default dropdown-toggle" type=button data-bs-toggle=dropdown aria-expanded=false>
+Dropdown</button><ul class=dropdown-menu><li><button class=dropdown-item type=button>Action</button></li><li><button class=dropdown-item type=button>Another action</button></li><li><button class=dropdown-item type=button>Something else here</button></li></ul></div></div><div class=position-relative><pre class=bd-code-snippet><code class=language-markup>&lt;div class=&#34;dropdown&#34;&gt;
+  &lt;button class=&#34;btn btn-default dropdown-toggle&#34; type=&#34;button&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;
+    Dropdown
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;button class=&#34;dropdown-item&#34; type=&#34;button&#34;&gt;Action&lt;/button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;button class=&#34;dropdown-item&#34; type=&#34;button&#34;&gt;Another action&lt;/button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;button class=&#34;dropdown-item&#34; type=&#34;button&#34;&gt;Something else here&lt;/button&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div><p>You can also create non-interactive dropdown items with <code>.dropdown-item-text</code>. Feel free to style further with custom CSS or text utilities.</p><div class=bd-example><div class=dropdown><button type=button class="btn btn-default dropdown-toggle" data-bs-toggle=dropdown aria-expanded=false>
+Dropdown</button><ul class=dropdown-menu><li><span class=dropdown-item-text>Dropdown item text</span></li><li><a class=dropdown-item href=#>Action</a></li><li><a class=dropdown-item href=#>Another action</a></li><li><a class=dropdown-item href=#>Something else here</a></li></ul></div></div><div class=position-relative><pre class=bd-code-snippet><code class=language-markup>&lt;div class=&#34;dropdown&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-default dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;
+    Dropdown
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;span class=&#34;dropdown-item-text&#34;&gt;Dropdown item text&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div><h3 id=selectd-item>Selectd item</h3><p>Add <code>.active</code> to items in the dropdown to style them as active. To convey the active state to assistive technologies, use the <code>aria-current</code> attribute — using the <code>page</code> value for the current page, or <code>true</code> for the current item in a set.</p><div class=bd-example><div class=dropdown><button type=button class="btn btn-default dropdown-toggle" data-bs-toggle=dropdown aria-expanded=false>
+Dropdown</button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Regular link</a></li><li><a class="dropdown-item active" href=# aria-current=true>Active link</a></li><li><a class=dropdown-item href=#>Another link</a></li></ul></div></div><div class=position-relative><pre class=bd-code-snippet><code class=language-markup>&lt;div class=&#34;dropdown&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-default dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;
+    Dropdown
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Regular link&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item active&#34; href=&#34;#&#34; aria-current=&#34;true&#34;&gt;Active link&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Another link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div><h3 id=disabled-item>Disabled item</h3><p>Add <code>.disabled</code> to items in the dropdown to style them as disabled.</p><div class=bd-example><div class=dropdown><button type=button class="btn btn-default dropdown-toggle" data-bs-toggle=dropdown aria-expanded=false>Dropdown</button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Regular link</a></li><li><a class="dropdown-item disabled">Disabled link</a></li><li><a class=dropdown-item href=#>Another link</a></li></ul></div></div><div class=position-relative><pre class=bd-code-snippet><code class=language-markup>&lt;div class=&#34;dropdown&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-default dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;Dropdown&lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Regular link&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item disabled&#34;&gt;Disabled link&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Another link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div><h2 id=menu-alignment>Menu alignment</h2><p>By default, a dropdown menu is automatically positioned 100% from the top and along the left side of its parent. You can change this with the directional <code>.drop*</code> classes, but you can also control them with additional modifier classes.</p><p>Add <code>.dropdown-menu-end</code> to a <code>.dropdown-menu</code> to right align the dropdown menu.</p><div class=bd-example><div class=btn-group><button type=button class="btn btn-default dropdown-toggle" data-bs-toggle=dropdown aria-expanded=false>
+Right-aligned menu example</button><ul class="dropdown-menu dropdown-menu-end"><li><button class=dropdown-item type=button>Action</button></li><li><button class=dropdown-item type=button>Another action</button></li><li><button class=dropdown-item type=button>Something else here</button></li></ul></div></div><div class=position-relative><pre class=bd-code-snippet><code class=language-markup>&lt;div class=&#34;btn-group&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-default dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;
+    Right-aligned menu example
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu dropdown-menu-end&#34;&gt;
+    &lt;li&gt;&lt;button class=&#34;dropdown-item&#34; type=&#34;button&#34;&gt;Action&lt;/button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;button class=&#34;dropdown-item&#34; type=&#34;button&#34;&gt;Another action&lt;/button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;button class=&#34;dropdown-item&#34; type=&#34;button&#34;&gt;Something else here&lt;/button&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div><h3 id=responsive-alignment>Responsive alignment</h3><p>If you want to use responsive alignment, disable dynamic positioning by adding the <code>data-bs-display="static</code> attribute and use the responsive variation classes.</p><p>To align <strong>right</strong> the dropdown menu with the given breakpoint or larger, add <code>.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-end</code>.</p><div class=bd-example><div class=btn-group><button type=button class="btn btn-default dropdown-toggle" data-bs-toggle=dropdown data-bs-display=static aria-expanded=false>
+Left-aligned but right aligned when large screen</button><ul class="dropdown-menu dropdown-menu-lg-end"><li><button class=dropdown-item type=button>Action</button></li><li><button class=dropdown-item type=button>Another action</button></li><li><button class=dropdown-item type=button>Something else here</button></li></ul></div></div><div class=position-relative><pre class=bd-code-snippet><code class=language-markup>&lt;div class=&#34;btn-group&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-default dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; data-bs-display=&#34;static&#34; aria-expanded=&#34;false&#34;&gt;
+    Left-aligned but right aligned when large screen
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu dropdown-menu-lg-end&#34;&gt;
+    &lt;li&gt;&lt;button class=&#34;dropdown-item&#34; type=&#34;button&#34;&gt;Action&lt;/button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;button class=&#34;dropdown-item&#34; type=&#34;button&#34;&gt;Another action&lt;/button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;button class=&#34;dropdown-item&#34; type=&#34;button&#34;&gt;Something else here&lt;/button&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div><p>To align <strong>left</strong> the dropdown menu with the given breakpoint or larger, add .dropdown-menu-end and <code>.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-start</code>.</p><div class=bd-example><div class=btn-group><button type=button class="btn btn-default dropdown-toggle" data-bs-toggle=dropdown data-bs-display=static aria-expanded=false>
+Right-aligned but left aligned when large screen</button><ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start"><li><button class=dropdown-item type=button>Action</button></li><li><button class=dropdown-item type=button>Another action</button></li><li><button class=dropdown-item type=button>Something else here</button></li></ul></div></div><div class=position-relative><pre class=bd-code-snippet><code class=language-markup>&lt;div class=&#34;btn-group&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-default dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; data-bs-display=&#34;static&#34; aria-expanded=&#34;false&#34;&gt;
+    Right-aligned but left aligned when large screen
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu dropdown-menu-end dropdown-menu-lg-start&#34;&gt;
+    &lt;li&gt;&lt;button class=&#34;dropdown-item&#34; type=&#34;button&#34;&gt;Action&lt;/button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;button class=&#34;dropdown-item&#34; type=&#34;button&#34;&gt;Another action&lt;/button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;button class=&#34;dropdown-item&#34; type=&#34;button&#34;&gt;Something else here&lt;/button&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div><h3 id=alignment-options>Alignment options</h3><p>Taking most of the options shown above, here’s a small kitchen sink demo of various dropdown alignment options in one place.</p><div class=bd-example><div class="dropdown mb-2"><button class="btn btn-default dropdown-toggle" type=button data-bs-toggle=dropdown aria-expanded=false>
+Dropdown</button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Menu item</a></li><li><a class=dropdown-item href=#>Menu item</a></li><li><a class=dropdown-item href=#>Menu item</a></li></ul></div><div class="dropdown mb-2"><button type=button class="btn btn-default dropdown-toggle" data-bs-toggle=dropdown aria-expanded=false>
+Right-aligned menu</button><ul class="dropdown-menu dropdown-menu-end"><li><a class=dropdown-item href=#>Menu item</a></li><li><a class=dropdown-item href=#>Menu item</a></li><li><a class=dropdown-item href=#>Menu item</a></li></ul></div><div class="dropdown mb-2"><button type=button class="btn btn-default dropdown-toggle" data-bs-toggle=dropdown data-bs-display=static aria-expanded=false>
+Left-aligned, right-aligned lg</button><ul class="dropdown-menu dropdown-menu-lg-end"><li><a class=dropdown-item href=#>Menu item</a></li><li><a class=dropdown-item href=#>Menu item</a></li><li><a class=dropdown-item href=#>Menu item</a></li></ul></div><div class="dropdown mb-2"><button type=button class="btn btn-default dropdown-toggle" data-bs-toggle=dropdown data-bs-display=static aria-expanded=false>
+Right-aligned, left-aligned lg</button><ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start"><li><a class=dropdown-item href=#>Menu item</a></li><li><a class=dropdown-item href=#>Menu item</a></li><li><a class=dropdown-item href=#>Menu item</a></li></ul></div><div class="dropstart mb-2"><button type=button class="btn btn-default dropdown-toggle" data-bs-toggle=dropdown aria-expanded=false>
+Dropstart</button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Menu item</a></li><li><a class=dropdown-item href=#>Menu item</a></li><li><a class=dropdown-item href=#>Menu item</a></li></ul></div><div class="dropend mb-2"><button type=button class="btn btn-default dropdown-toggle" data-bs-toggle=dropdown aria-expanded=false>
+Dropend</button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Menu item</a></li><li><a class=dropdown-item href=#>Menu item</a></li><li><a class=dropdown-item href=#>Menu item</a></li></ul></div><div class=dropup><button type=button class="btn btn-default dropdown-toggle" data-bs-toggle=dropdown aria-expanded=false>
+Dropup</button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Menu item</a></li><li><a class=dropdown-item href=#>Menu item</a></li><li><a class=dropdown-item href=#>Menu item</a></li></ul></div></div><div class=position-relative><pre class=bd-code-snippet><code class=language-markup>&lt;div class=&#34;dropdown mb-2&#34;&gt;
+  &lt;button class=&#34;btn btn-default dropdown-toggle&#34; type=&#34;button&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;
+    Dropdown
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;dropdown mb-2&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-default dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;
+    Right-aligned menu
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu dropdown-menu-end&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;dropdown mb-2&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-default dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; data-bs-display=&#34;static&#34; aria-expanded=&#34;false&#34;&gt;
+    Left-aligned, right-aligned lg
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu dropdown-menu-lg-end&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;dropdown mb-2&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-default dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; data-bs-display=&#34;static&#34; aria-expanded=&#34;false&#34;&gt;
+    Right-aligned, left-aligned lg
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu dropdown-menu-end dropdown-menu-lg-start&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;dropstart mb-2&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-default dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;
+    Dropstart
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;dropend mb-2&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-default dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;
+    Dropend
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;dropup&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-default dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;
+    Dropup
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div><h2 id=menu-content>Menu content</h2><h3 id=headers>Headers</h3><p>Add a header to label sections of actions in any dropdown menu.</p><div class=bd-example><div class=dropdown><button type=button class="btn btn-default dropdown-toggle" data-bs-toggle=dropdown aria-expanded=false>
+Dropdown</button><ul class=dropdown-menu><li><h6 class=dropdown-header>Dropdown header</h6></li><li><a class=dropdown-item href=#>Action</a></li><li><a class=dropdown-item href=#>Another action</a></li></ul></div></div><div class=position-relative><pre class=bd-code-snippet><code class=language-markup>&lt;div class=&#34;dropdown&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-default dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;
+    Dropdown
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;h6 class=&#34;dropdown-header&#34;&gt;Dropdown header&lt;/h6&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div><h3 id=dividers>Dividers</h3><p>Separate groups of related menu items with a divider <code>.dropdown-divider</code>.</p><div class=bd-example><div class=dropdown><button type=button class="btn btn-default dropdown-toggle" data-bs-toggle=dropdown aria-expanded=false>Dropdown</button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Action</a></li><li><a class=dropdown-item href=#>Another action</a></li><li><a class=dropdown-item href=#>Something else here</a></li><li><hr class=dropdown-divider></li><li><a class=dropdown-item href=#>Separated link</a></li></ul></div></div><div class=position-relative><pre class=bd-code-snippet><code class=language-markup>&lt;div class=&#34;dropdown&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-default dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;Dropdown&lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;hr class=&#34;dropdown-divider&#34; /&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div><h3 id=text>Text</h3><p>Place any freeform text within a dropdown menu with text and use spacing utilities. Note that you’ll likely need additional sizing styles to constrain the menu width.</p><div class=bd-example><div class=dropdown><button type=button class="btn btn-default dropdown-toggle" data-bs-toggle=dropdown aria-expanded=false>Dropdown</button><div class="dropdown-menu p-4 text-muted" style=max-width:200px><p>Some example text that's free-flowing within the dropdown menu.</p><p class=mb-0>And this is more example text.</p></div></div></div><div class=position-relative><pre class=bd-code-snippet><code class=language-markup>&lt;div class=&#34;dropdown&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-default dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34;&gt;Dropdown&lt;/button&gt;
+  &lt;div class=&#34;dropdown-menu p-4 text-muted&#34; style=&#34;max-width: 200px;&#34;&gt;
+    &lt;p&gt;Some example text that&#39;s free-flowing within the dropdown menu.&lt;/p&gt;
+    &lt;p class=&#34;mb-0&#34;&gt;And this is more example text.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div><h3 id=forms>Forms</h3><p>Put a form within a dropdown menu, or make it into a dropdown menu, and use <a href=/docs/margin/>margin</a> or <a href=/docs/padding/>padding</a> utilities to give it the negative space you require. You also can use CSS variable <code>--bs-dropdown-min-width</code> to change the form min width.</p><div class=bd-example><div class=dropdown><button type=button class="btn btn-default dropdown-toggle" data-bs-toggle=dropdown aria-expanded=false data-bs-auto-close=outside>
+Log in</button><form class="dropdown-menu p-4" style=--bs-dropdown-min-width:320px><div class=mb-3><label for=exampleDropdownFormEmail2 class=form-label>Email address</label>
+<input type=email class=form-control id=exampleDropdownFormEmail2 placeholder=email@example.com></div><div class=mb-3><label for=exampleDropdownFormPassword2 class=form-label>Password</label>
+<input type=password class=form-control id=exampleDropdownFormPassword2 placeholder=Password></div><div class=mb-3><div class=form-check><input type=checkbox class=form-check-input id=dropdownCheck2>
+<label class=form-check-label for=dropdownCheck2>Remember me</label></div></div><button type=submit class="btn btn-primary">Sign in</button></form></div></div><div class=position-relative><pre class=bd-code-snippet><code class=language-markup>&lt;div class=&#34;dropdown&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-default dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; aria-expanded=&#34;false&#34; data-bs-auto-close=&#34;outside&#34;&gt;
+    Log in
+  &lt;/button&gt;
+  &lt;form class=&#34;dropdown-menu p-4&#34; style=&#34;--bs-dropdown-min-width:320px;&#34;&gt;
+    &lt;div class=&#34;mb-3&#34;&gt;
+      &lt;label for=&#34;exampleDropdownFormEmail2&#34; class=&#34;form-label&#34;&gt;Email address&lt;/label&gt;
+      &lt;input type=&#34;email&#34; class=&#34;form-control&#34; id=&#34;exampleDropdownFormEmail2&#34; placeholder=&#34;email@example.com&#34; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;mb-3&#34;&gt;
+      &lt;label for=&#34;exampleDropdownFormPassword2&#34; class=&#34;form-label&#34;&gt;Password&lt;/label&gt;
+      &lt;input type=&#34;password&#34; class=&#34;form-control&#34; id=&#34;exampleDropdownFormPassword2&#34; placeholder=&#34;Password&#34; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;mb-3&#34;&gt;
+      &lt;div class=&#34;form-check&#34;&gt;
+        &lt;input type=&#34;checkbox&#34; class=&#34;form-check-input&#34; id=&#34;dropdownCheck2&#34; /&gt;
+        &lt;label class=&#34;form-check-label&#34; for=&#34;dropdownCheck2&#34;&gt; Remember me &lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button type=&#34;submit&#34; class=&#34;btn btn-primary&#34;&gt;Sign in&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/div&gt;</code></pre></div><h2 id=auto-close>Auto close</h2><p>By default, the dropdown menu is closed when clicking inside or outside the dropdown menu. You can use the <code>autoClose</code> option by <code>data-bs-auto-close</code> to change this behavior of the dropdown.</p><div class="bd-example d-flex flex-wrap gap-2"><div class=dropdown><button type=button class="btn btn-default dropdown-toggle" data-bs-toggle=dropdown data-bs-auto-close=true aria-expanded=false>
+Default dropdown</button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Menu item</a></li><li><a class=dropdown-item href=#>Menu item</a></li><li><a class=dropdown-item href=#>Menu item</a></li></ul></div><div class=dropdown><button type=button class="btn btn-default dropdown-toggle" data-bs-toggle=dropdown data-bs-auto-close=inside aria-expanded=false>
+Clickable outside</button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Menu item</a></li><li><a class=dropdown-item href=#>Menu item</a></li><li><a class=dropdown-item href=#>Menu item</a></li></ul></div><div class=dropdown><button type=button class="btn btn-default dropdown-toggle" data-bs-toggle=dropdown data-bs-auto-close=outside aria-expanded=false>
+Clickable inside</button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Menu item</a></li><li><a class=dropdown-item href=#>Menu item</a></li><li><a class=dropdown-item href=#>Menu item</a></li></ul></div><div class=dropdown><button type=button class="btn btn-default dropdown-toggle" data-bs-toggle=dropdown data-bs-auto-close=false aria-expanded=false>
+Manual close</button><ul class=dropdown-menu><li><a class=dropdown-item href=#>Menu item</a></li><li><a class=dropdown-item href=#>Menu item</a></li><li><a class=dropdown-item href=#>Menu item</a></li></ul></div></div><div class=position-relative><pre class=bd-code-snippet><code class=language-markup>&lt;div class=&#34;dropdown&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-default dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; data-bs-auto-close=&#34;true&#34; aria-expanded=&#34;false&#34;&gt;
+    Default dropdown
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;dropdown&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-default dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; data-bs-auto-close=&#34;inside&#34; aria-expanded=&#34;false&#34;&gt;
+    Clickable outside
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;dropdown&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-default dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; data-bs-auto-close=&#34;outside&#34; aria-expanded=&#34;false&#34;&gt;
+    Clickable inside
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;dropdown&#34;&gt;
+  &lt;button type=&#34;button&#34; class=&#34;btn btn-default dropdown-toggle&#34; data-bs-toggle=&#34;dropdown&#34; data-bs-auto-close=&#34;false&#34; aria-expanded=&#34;false&#34;&gt;
+    Manual close
+  &lt;/button&gt;
+  &lt;ul class=&#34;dropdown-menu&#34;&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&#34;dropdown-item&#34; href=&#34;#&#34;&gt;Menu item&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div><p>Below is the <code>autoClose</code> options:</p><ul><li><code>true</code> - the dropdown will be closed by clicking outside or inside the dropdown menu.</li><li><code>false</code> - the dropdown will be closed by clicking the toggle button and manually calling hide or toggle method. (Also will not be closed by pressing esc key)</li><li><code>inside</code> - the dropdown will be closed (only) by clicking inside the dropdown menu.</li><li><code>outside</code> - the dropdown will be closed (only) by clicking outside the dropdown menu.</li></ul><section class="alert alert-info my-5" role=alert><div class="d-flex gap-4"><span><i class="fa-solid fa-circle-info icon-info fa-lg"></i></span><div>Note: the dropdown can always be closed with the <kbd>ESC</kbd> key.</div></div></section></div></div></div><div class=tab-pane id=tabpanel-1 role=tabpanel><div class=bd-main-content><div class="bd-toc d-none d-xl-block py-8"><div class="doc-nav align-self-start d-none d-xl-flex flex-column fs-sm"><span class="fw-semibold fs-xs text-uppercase">Contents</span><div class="doc-nav-content position-relative mt-2" id=doc-nav-1><nav id=TableOfContents><ul><li><a href=#usage>Usage</a><ul><li><a href=#via-data-attributes>Via data attributes</a></li><li><a href=#via-javascript>Via JavaScript</a></li></ul></li><li><a href=#options>Options</a></li><li><a href=#methods>Methods</a></li><li><a href=#events>Events</a></li></ul></nav></div></div></div><div class="bd-content px-4 px-md-6 px-lg-10 px-xl-20 py-8" data-bs-spy=scroll data-bs-target=#doc-nav-1 data-bs-smooth-scroll=true tabindex=0><h2 id=usage>Usage</h2><p>Via data attributes or JavaScript, the dropdown plugin toggles hidden content (dropdown menus) by toggling the <code>.show</code> class on the parent <code>.dropdown-menu</code>. The <code>data-bs-toggle="dropdown"</code> attribute is relied on for closing dropdown menus at an application level, so it&rsquo;s a good idea to always use it.</p><section class="alert alert-info my-5" role=alert><div class="d-flex gap-4"><span><i class="fa-solid fa-circle-info icon-info fa-lg"></i></span><div>On touch-enabled devices, opening a dropdown adds empty <code>mouseover</code> handlers to the immediate children of the <code>&lt;body></code> element. This admittedly ugly hack is necessary to work around a <a href=https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html>quirk in iOS&rsquo; event delegation</a>, which would otherwise prevent a tap anywhere outside of the dropdown from triggering the code that closes the dropdown. Once the dropdown is closed, these additional empty <code>mouseover</code> handlers are removed.</div></div></section><h3 id=via-data-attributes>Via data attributes</h3><p>Add <code>data-bs-toggle="dropdown"</code> to a link or button to toggle a dropdown.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;dropdown&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;</span><span class=nt>button</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;button&#34;</span> <span class=na>data-bs-toggle</span><span class=o>=</span><span class=s>&#34;dropdown&#34;</span> <span class=na>aria-expanded</span><span class=o>=</span><span class=s>&#34;false&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    Dropdown trigger
+</span></span><span class=line><span class=cl>  <span class=p>&lt;/</span><span class=nt>button</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;</span><span class=nt>ul</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;dropdown-menu&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    ...
+</span></span><span class=line><span class=cl>  <span class=p>&lt;/</span><span class=nt>ul</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</span></span></code></pre></div><h3 id=via-javascript>Via JavaScript</h3><p>Call the dropdowns via JavaScript:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=nx>dropdownElementList</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>querySelectorAll</span><span class=p>(</span><span class=s2>&#34;.dropdown-toggle&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>dropdownList</span> <span class=o>=</span> <span class=p>[...</span><span class=nx>dropdownElementList</span><span class=p>].</span><span class=nx>map</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>  <span class=p>(</span><span class=nx>dropdownToggleEl</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=k>new</span> <span class=nx>bootstrap</span><span class=p>.</span><span class=nx>Dropdown</span><span class=p>(</span><span class=nx>dropdownToggleEl</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>);</span>
+</span></span></code></pre></div><section class="alert alert-info my-5" role=alert><div class="d-flex gap-4"><span><i class="fa-solid fa-circle-info icon-info fa-lg"></i></span><div><h5 id=data-bs-toggledropdown-still-required><code>data-bs-toggle="dropdown"</code> still required</h5><p>Regardless of whether you call your dropdown via JavaScript or instead use the data-api, <code>data-bs-toggle="dropdown"</code> is always required to be present on the dropdown&rsquo;s trigger element.</div></div></section><h2 id=options>Options</h2><p>As options can be passed via data attributes or JavaScript, you can append an option name to <code>data-bs-</code>, as in <code>data-bs-animation="{value}"</code>. Make sure to change the case type of the option name from &ldquo;<em>camelCase</em>&rdquo; to &ldquo;<em>kebab-case</em>&rdquo; when passing the options via data attributes. For example, use <code>data-bs-custom-class="beautifier"</code> instead of <code>data-bs-customClass="beautifier"</code>.</p><p>As of Bootstrap 5.2.0, all components support an <strong>experimental</strong> reserved data attribute <code>data-bs-config</code> that can house simple component configuration as a JSON string. When an element has <code>data-bs-config='{"delay":0, "title":123}'</code> and <code>data-bs-title="456"</code> attributes, the final <code>title</code> value will be <code>456</code> and the separate data attributes will override values given on <code>data-bs-config</code>. In addition, existing data attributes are able to house JSON values like <code>data-bs-delay='{"show":0,"hide":150}'</code>.</p><div class=table-responsive><table class=table><thead><tr><th>Name</th><th>Type</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td><code>autoClose</code></td><td>boolean, string</td><td><code>true</code></td><td>Configure the auto close behavior of the dropdown:<ul class=my-2><li><code>true</code> - the dropdown will be closed by clicking outside or inside the dropdown menu.</li><li><code>false</code> - the dropdown will be closed by clicking the toggle button and manually calling <code>hide</code> or <code>toggle</code> method. (Also will not be closed by pressing <kbd>esc</kbd> key)</li><li><code>'inside'</code> - the dropdown will be closed (only) by clicking inside the dropdown menu.</li><li><code>'outside'</code> - the dropdown will be closed (only) by clicking outside the dropdown menu.</li></ul>Note: the dropdown can always be closed with the <kbd>ESC</kbd> key</td></tr><tr><td><code>boundary</code></td><td>string, element</td><td><code>'scrollParent'</code></td><td>Overflow constraint boundary of the dropdown menu (applies only to Popper&rsquo;s preventOverflow modifier). By default it&rsquo;s <code>clippingParents</code> and can accept an HTMLElement reference (via JavaScript only). For more information refer to Popper&rsquo;s <a href=https://popper.js.org/docs/v2/utils/detect-overflow/#boundary>detectOverflow docs</a>.</td></tr><tr><td><code>display</code></td><td>string</td><td><code>'dynamic'</code></td><td>By default, we use Popper for dynamic positioning. Disable this with <code>static</code>.</td></tr><tr><td><code>offset</code></td><td>number, string, function</td><td><code>[0, 2]</code></td><td>Offset of the dropdown relative to its target. You can pass a string in data attributes with comma separated values like: <code>data-bs-offset="10,20"</code>. When a function is used to determine the offset, it is called with an object containing the popper placement, the reference, and popper rects as its first argument. The triggering element DOM node is passed as the second argument. The function must return an array with two numbers: <a href=https://popper.js.org/docs/v2/modifiers/offset/#skidding-1>skidding</a>, <a href=https://popper.js.org/docs/v2/modifiers/offset/#distance-1>distance</a>. For more information refer to Popper&rsquo;s <a href=https://popper.js.org/docs/v2/modifiers/offset/#options>offset docs</a>.</td></tr><tr><td><code>popperConfig</code></td><td>null, object, function</td><td><code>null</code></td><td>To change Bootstrap&rsquo;s default Popper config, see <a href=https://popper.js.org/docs/v2/constructors/#options>Popper&rsquo;s configuration</a>. When a function is used to create the Popper configuration, it&rsquo;s called with an object that contains the Bootstrap&rsquo;s default Popper configuration. It helps you use and merge the default with your own configuration. The function must return a configuration object for Popper.</td></tr><tr><td><code>reference</code></td><td>string, element</td><td><code>'toggle'</code></td><td>Reference element of the dropdown menu. Accepts the values of <code>'toggle'</code>, <code>'parent'</code>, an HTMLElement reference or an object providing <code>getBoundingClientRect</code>. For more information refer to Popper&rsquo;s <a href=https://popper.js.org/docs/v2/constructors/#createpopper>constructor docs</a> and <a href=https://popper.js.org/docs/v2/virtual-elements/>virtual element docs</a>.</td></tr></tbody></table></div><h4 id=using-function-with-popperconfig>Using function with <code>popperConfig</code></h4><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=nx>dropdown</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>bootstrap</span><span class=p>.</span><span class=nx>Dropdown</span><span class=p>(</span><span class=nx>element</span><span class=p>,</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>popperConfig</span><span class=p>(</span><span class=nx>defaultBsPopperConfig</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// const newPopperConfig = {...}
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>// use defaultBsPopperConfig if needed...
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>// return newPopperConfig
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></div><h2 id=methods>Methods</h2><div class=table-responsive><table class=table><thead><tr><th>Method</th><th>Description</th></tr></thead><tbody><tr><td><code>dispose</code></td><td>Destroys an element&rsquo;s dropdown. (Removes stored data on the DOM element)</td></tr><tr><td><code>getInstance</code></td><td>Static method which allows you to get the dropdown instance associated to a DOM element, you can use it like this: <code>bootstrap.Dropdown.getInstance(element)</code></td></tr><tr><td><code>getOrCreateInstance</code></td><td>Static method which returns a dropdown instance associated to a DOM element or create a new one in case it wasn&rsquo;t initialized. You can use it like this: <code>bootstrap.Dropdown.getOrCreateInstance(element)</code>.</td></tr><tr><td><code>hide</code></td><td>Hides the dropdown menu of a given navbar or tabbed navigation.</td></tr><tr><td><code>show</code></td><td>Shows the dropdown menu of a given navbar or tabbed navigation.</td></tr><tr><td><code>toggle</code></td><td>Toggles the dropdown menu of a given navbar or tabbed navigation.</td></tr><tr><td><code>update</code></td><td>Updates the position of an element&rsquo;s dropdown.</td></tr></tbody></table></div><h2 id=events>Events</h2><p>All dropdown events are fired at the toggling element and then bubbled up. So you can also add event listeners on the <code>.dropdown-menu</code>&rsquo;s parent element. <code>hide.bs.dropdown</code> and <code>hidden.bs.dropdown</code> events have a <code>clickEvent</code> property (only when the original Event type is <code>click</code>) that contains an Event Object for the click event.</p><div class=table-responsive><table class=table><thead><tr><th>Event type</th><th>Description</th></tr></thead><tbody><tr><td><code>hide.bs.dropdown</code></td><td>Fires immediately when the <code>hide</code> instance method has been called.</td></tr><tr><td><code>hidden.bs.dropdown</code></td><td>Fired when the dropdown has finished being hidden from the user and CSS transitions have completed.</td></tr><tr><td><code>show.bs.dropdown</code></td><td>Fires immediately when the <code>show</code> instance method is called.</td></tr><tr><td><code>shown.bs.dropdown</code></td><td>Fired when the dropdown has been made visible to the user and CSS transitions have completed.</td></tr></tbody></table></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=nx>myDropdown</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>getElementById</span><span class=p>(</span><span class=s1>&#39;myDropdown&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nx>myDropdown</span><span class=p>.</span><span class=nx>addEventListener</span><span class=p>(</span><span class=s1>&#39;show.bs.dropdown&#39;</span><span class=p>,</span> <span class=nx>event</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// do something...
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>})</span>
+</span></span></code></pre></div></div></div></div></div></main></div><script src=https://cdn.jsdelivr.net/npm/fastbootstrap@2.0.0/dist/js/fastbootstrap.min.js integrity="sha256-o0tNXN7ia0O9G0qNbrzBkEEiQTv+GeW5EO4LjnfDkZk=" crossorigin=anonymous></script>
+<script src=/assets/js/main.8795805b327c986cff8ba1fc4152e5085b98750797cdd536407979c4a6dd16be.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/toolbar/prism-toolbar.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CR6EJXJK4S"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-CR6EJXJK4S")</script></body></html>

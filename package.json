@@ -2,6 +2,8 @@
   "name": "fastbootstrap-docs",
   "version": "0.1.0",
   "devDependencies": {
-    "fastbootstrap": "^2.0.0"
+    "fastbootstrap": "^2.0.0",
+    "prettier": "^2.7.0",
+    "prettier-plugin-go-template": "^0.0.13"
   }
 }

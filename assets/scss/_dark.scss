@@ -5,6 +5,16 @@
     }
   }
 
+  #bd-theme {
+    > *:first-child {
+      display: none;
+    }
+    
+    > *:last-child {
+      display: block;
+    }
+  }
+
   .bg-neutral-subtler {
     background-color: #03040442;
   }

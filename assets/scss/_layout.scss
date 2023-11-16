@@ -45,6 +45,20 @@
   }
 }
 
+#bd-theme {
+  > * {
+    display: none;
+  }
+
+  > *:first-child {
+    display: block;
+  }
+
+  > *:last-child {
+    display: none;
+  }
+}
+
 #searchModal {
   mark {
     padding: 0;
@@ -172,16 +186,7 @@
 }
 
 .bg-striped-white {
-  background-image: linear-gradient(
-    135deg,
-    #fff 10%,
-    #0000 0,
-    #0000 50%,
-    #fff 0,
-    #fff 60%,
-    #0000 0,
-    #0000
-  );
+  background-image: linear-gradient(135deg, #fff 10%, #0000 0, #0000 50%, #fff 0, #fff 60%, #0000 0, #0000);
   background-size: 7.07px 7.07px;
 }
 

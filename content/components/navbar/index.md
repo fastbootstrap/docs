@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Navbar
-description: "Navbars are allows users quickly navigate the entire content of a product or a section of the application."
+description: "Navbars allow users to quickly navigate the entire content of a product or a section of the application."
 toc: true
 group: navigation
 menu:
@@ -10,13 +10,13 @@ menu:
 
 **Bootstrap 5 Navbar component**
 
-Responsive navbar built with the latest Bootstrap 5. Navbars are allows users quickly navigate the entire content of a product or a section of the application.
+Responsive navbar built with the latest Bootstrap 5. Navbars allow users to quickly navigate the entire content of a product or a section of the application.
 
 Documentation and examples for Bootstrap’s powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.
 
 ## Navbar example
 
-The navbar is a horizontal list of links when in the expanding state. It can includes [Dropdown]({{< docsref "dropdown" >}}), [Button]({{< docsref "button" >}}), [Form]({{< docsref "form" >}}) etc if your need.
+The navbar is a horizontal list of links when in the expanding state. It can include [Dropdown]({{< docsref "dropdown" >}}), [Button]({{< docsref "button" >}}), [Form]({{< docsref "form" >}}), etc., if your need.
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg">
@@ -153,7 +153,7 @@ Navbars come with built-in support for a handful of sub-components. Choose from 
 - `.collapse.navbar-collapse` for grouping and hiding navbar contents by a parent breakpoint.
 - Add an optional `.navbar-scroll` to set a `max-height` and [scroll expanded navbar content](#scrolling).
 
-Apart from listed above, navbar supports also components like breadcrumbs, forms, buttons, icons, flags, avatars, badges, and a few more.
+Apart from what is listed above, navbar also supports components like breadcrumbs, forms, buttons, icons, flags, avatars, badges, and a few more.
 
 ### Brand
 
@@ -175,7 +175,7 @@ Add your text within an element with the `.navbar-brand` class.
 
 #### Image 
 
-You can replace the text within the .navbar-brand with an <img>.
+You can replace the text within the .navbar-brand with an `<img>`.
 
 {{< example >}}
 <nav class="navbar">
@@ -499,7 +499,7 @@ We add `.d-flex` `.flex-row` classes to keep the icons inline when the navbar is
 
 ### Badges
 
-[Badges]({{< ref "badge" >}}) can be very useful for presenting counters, for example in the shopping cart.
+[Badges]({{< ref "badge" >}}) can be very useful for presenting counters, for example on a shopping cart.
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg">
@@ -521,7 +521,7 @@ We add `.d-flex` `.flex-row` classes to keep the icons inline when the navbar is
 
 ### Avatar
 
-Add an [Avatar]({{< ref "avatar" >}}) with [Dropdown]({{< ref "dropdown" >}}) to navbar show a user profile.
+Add an [Avatar]({{< ref "avatar" >}}) with [Dropdown]({{< ref "dropdown" >}}) to navbar to show a user profile.
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg">
@@ -679,7 +679,7 @@ Add `.ms-auto` class to the .navbar-nav to align the content to the right.
 
 ### Centered
 
-Add `.mx-auto` class to the `.navbar-nav` to make content are centered.
+Add `.mx-auto` class to the `.navbar-nav` to make sure content is centered.
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg navbar-light">
@@ -757,7 +757,9 @@ For navbars that never collapse, add the `.navbar-expand` class on the navbar. F
 
 Navbar togglers `.navbar-toggler` are left-aligned by default, but should they follow a sibling element like a `.navbar-brand`, they’ll automatically be aligned to the far right. Reversing your markup will reverse the placement of the toggler. 
 
-Below are examples of different toggle styles With no `.navbar-brand` shown at the smallest breakpoint:
+Below are examples of different toggle styles.
+
+With no `.navbar-brand` shown at the smallest breakpoint:
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg">
@@ -878,7 +880,7 @@ Sometimes you want to use the collapse plugin to trigger a container element for
 </nav>
 {{</ example >}}
 
-When you do this, we recommend including additional JavaScript to move the focus programmatically to the container when it is opened. Otherwise, keyboard users and users of assistive technologies will likely have a hard time finding the newly revealed content - particularly if the container that was opened comes before the toggler in the document’s structure. We also recommend making sure that the toggler has the `aria-controls` attribute, pointing to the `id` of the content container. In theory, this allows assistive technology users to jump directly from the toggler to the container it controls–but support for this is currently quite patchy.
+When you do this, we recommend including additional JavaScript to move the focus programmatically to the container when it is opened. Otherwise, keyboard users and users of assistive technologies will likely have a hard time finding the newly revealed content–particularly if the container that was opened comes before the toggler in the document’s structure. We also recommend making sure that the toggler has the `aria-controls` attribute, pointing to the `id` of the content container. In theory, this allows assistive technology users to jump directly from the toggler to the container it controls–but support for this is currently quite patchy.
 
 ### Offcanvas
 

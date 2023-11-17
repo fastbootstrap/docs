@@ -1,0 +1,10 @@
+{{ with .GitInfo }}
+<div class="mt-6 mt-lg-8 mt-xl-16 py-8 border-top">
+    <div class="d-flex flex-column gap-5 gap-lg-6">
+        <a href="{{ printf "%s/edit/main/content/%s" $.Site.Params.docs_repo (path.Clean $.File.Path) | safeURL  }}"><i class="fa-solid fa-pencil me-2"></i> Edit this  page on Github</a>
+        <div class="fs-sm">
+            <span class="text-body-tertiary">Last edited by <a href="{{ printf "https://github.com/%s" .AuthorName }}">{{ .AuthorName }}</a>  on <a href="{{ printf "%s/commit/%s" $.Site.Params.docs_repo .Hash }}">{{ .AuthorDate | time.Format ":date_long" }}</a></span>
+        </div>
+    </div>
+</div>
+{{ end }}

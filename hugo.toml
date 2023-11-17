@@ -4,6 +4,7 @@ title = "Awesome Bootstrap Theme with Atlassian Design - FastBootstrap"
 
 enableRobotsTXT = true
 disableKinds = ["404", "taxonomy", "term", "RSS"]
+enableGitInfo = true
 
 publishDir = "public"
 enableInlineShortcodes = true
@@ -16,6 +17,7 @@ description = "FastBootstrap is a beautiful Bootstrap theme for your next projec
 page_title_suffix = "FastBootstrap Theme"
 github_org = "https://github.com/fastbootstrap"
 repo = "https://github.com/fastbootstrap/atlassian-design-for-bootstrap"
+docs_repo = "https://github.com/fastbootstrap/docs"
 current_version = "2.0.0"
 
 [params.download]

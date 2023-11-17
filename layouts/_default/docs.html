@@ -51,6 +51,7 @@
           </div>
           <div class="bd-content px-4 px-md-6 px-lg-10 px-xl-20 py-8" data-bs-spy="scroll" id="doc-content" data-bs-target=".doc-nav-content" data-bs-smooth-scroll="true" tabindex="0">
             {{ .Content }}
+            {{ partial "docs-footer" . }}
           </div>
         </div>
       {{ end }}

@@ -60,10 +60,10 @@ Add data-bs-theme="dark" to the parent element `card`, no matter the global colo
       </div>
     </div>
   </div>
-  <div class="col col-md-6">
-    <div class="d-flex flex-column p-8 pt-7">
-      <p class="mb-2 fs-sm fw-medium">Dark mode</p>
-      <div class="card rounded-3 px-6 py-8 shadow-lg" data-bs-theme="dark">
+  <div class="col col-md-6" data-bs-theme="dark">
+    <div class="d-flex flex-column p-8 pt-7 bg-body">
+      <p class="mb-2 fs-sm fw-medium text-body">Dark mode</p>
+      <div class="card rounded-3 px-6 py-8 shadow-lg">
         <div>
           <span class="d-inline-flex align-items-center justify-content-center p-2 text-bg-purple rounded-2 shadow-lg">
             <svg class="bd-h-6 bd-w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"

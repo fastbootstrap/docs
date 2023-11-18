@@ -7,6 +7,8 @@
       <meta name="description" content="{{ .Page.Params.description | default .Site.Params.description | markdownify }}" />
       {{ partial "sections/head-seo.html" . }}
     {{ end }}
+    {{ partial "opengraph" . }}
+    {{ partial "twitter_cards" . }}
     {{ block "head-meta-addons" . }}{{ end }}
   </head>
 

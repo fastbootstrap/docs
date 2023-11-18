@@ -15,7 +15,7 @@ home = ["HTML", "JSON", "RSS"]
 [params]
 description = "Beautiful Bootstrap UI components designed with Atlassian Design."
 page_title_suffix = "FastBootstrap"
-images = ["https://fastbootstrap.com/media/default-preview.jpg"]
+images = ["https://fastbootstrap.com/default-preview.jpg"]
 github_org = "https://github.com/fastbootstrap"
 repo = "https://github.com/fastbootstrap/atlassian-design-for-bootstrap"
 docs_repo = "https://github.com/fastbootstrap/docs"

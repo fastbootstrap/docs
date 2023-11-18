@@ -1,6 +1,6 @@
 ---
 title: Components
-seo_title: Bootstrap Free UI Components
+seo_title: Bootstrap Beautiful UI Components
 page_title_format: "Bootstrap %s Component - Examples & Tutorial"
 sidebar_menu: components
 image: /images/components@2x.png

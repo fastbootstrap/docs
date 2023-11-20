@@ -1,5 +1,4 @@
-<script src="https://cdn.jsdelivr.net/npm/fastbootstrap@2.0.0/dist/js/fastbootstrap.min.js" integrity="sha256-o0tNXN7ia0O9G0qNbrzBkEEiQTv+GeW5EO4LjnfDkZk=" crossorigin="anonymous"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/fastbootstrap@2.0.2/dist/js/fastbootstrap.min.js" integrity="sha256-o0tNXN7ia0O9G0qNbrzBkEEiQTv+GeW5EO4LjnfDkZk=" crossorigin="anonymous"></script>
 {{ $vendor := resources.Match "js/vendor/*.js" }}
 {{ $js := resources.Match "js/*.js" }}
 {{ $bundleJS := $vendor | append $js | resources.Concat "/assets/js/main.js" | fingerprint }}

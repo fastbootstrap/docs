@@ -210,7 +210,7 @@ You can do this with any button variant in `.btn-{color}`.
 
 Replace the default arrow icon with a custom icon. Just remove the `.dropdown-toggle` class and adds an icons onto the button. You also can use the `margin` or `flex` help classes for alignment if you need.
 
-{{< example >}}
+{{< example class="d-flex flex-wrap gap-3" >}}
 <button type="button" class="btn btn-default" data-bs-toggle="dropdown" aria-expanded="false">
   Page actions <i class="fas fa-angle-down ms-2"></i>
 </button>

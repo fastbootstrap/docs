@@ -65,9 +65,9 @@ While `<button>` is the recommended control for a dropdown toggle, there might b
 Similarly, create split button dropdowns with virtually the same markup as single button dropdowns, but with the addition of `.dropdown-toggle-split` for proper spacing around the dropdown caret.
 
 We use this extra class to reduce the horizontal `padding` on either side of the caret by 25% and remove the `margin-left` that’s added for regular button dropdowns. Those extra changes keep the caret centered in the split button and provide a more appropriately sized hit area next to the main button.
-
+ 
 {{< example >}}
-<div class="btn-group-segmented">
+<div class="btn-group btn-group-narrow">
     <button type="button" class="btn btn-default">Page actions</button>
     <button 
       type="button" 
@@ -219,11 +219,11 @@ Replace the default arrow icon with a custom icon. Just remove the `.dropdown-to
   <li><a class="dropdown-item" href="#">Action two</a></li>
   <li><a class="dropdown-item" href="#">Action three</a></li>
 </ul>
-<div class="btn-group-segmented">
+<div class="btn-group btn-group-narrow">
     <button type="button" class="btn btn-default">Page actions</button>
     <button 
       type="button" 
-      class="btn btn-default dropdown-toggle-split" 
+      class="btn btn-default" 
       data-bs-toggle="dropdown" 
       aria-expanded="false"
     ><i class="fa-solid fa-ellipsis"></i></button>
@@ -240,7 +240,7 @@ Replace the default arrow icon with a custom icon. Just remove the `.dropdown-to
 
 Button dropdowns work with buttons of all sizes(`.btn-sm`,`.btn-lg`), including default and split dropdown buttons. Check out our [button component]({{< docsref "button" >}}) for how to usage.
 
-{{< example class="d-flex flex-wrap align-items-start gap-2" >}}
+{{< example class="d-flex flex-column align-items-start gap-3" >}}
 <div class="dropdown">
   <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Small button

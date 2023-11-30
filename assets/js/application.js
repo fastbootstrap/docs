@@ -4,7 +4,7 @@
   const clipboard = new ClipboardJS('.bd-clipboard');
   clipboard.on('success', (event) => {
     const status = event.trigger.querySelector('.status');
-    status.innerHTML='<i class="fa-solid fa-check text-success"></i>';
+    status.innerHTML = '<i class="fa-solid fa-check text-success"></i>';
   });
 
   document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((tooltip) => {
@@ -86,6 +86,11 @@
     if (focus) {
       themeSwitcher.focus();
     }
+    // home components preview
+    const btnSwitchColorMode = document.querySelector(`input[name="btnColorMode"][value="${theme}"]`);
+    if (typeof btnSwitchColorMode === 'object') {
+      btnSwitchColorMode.checked = true;
+    }
   };
 
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
@@ -104,6 +109,14 @@
         setStoredTheme(theme);
         setTheme(theme);
         showActiveTheme(theme, true);
+      });
+    });
+
+    document.querySelectorAll('input[name="btnColorMode"]').forEach((elem) => {
+      elem.addEventListener('change', (e) => {
+        setStoredTheme(elem.value);
+        setTheme(elem.value);
+        showActiveTheme(elem.value, false);
       });
     });
   });

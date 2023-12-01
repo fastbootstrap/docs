@@ -88,7 +88,7 @@
     }
     // home components preview
     const btnSwitchColorMode = document.querySelector(`input[name="btnColorMode"][value="${theme}"]`);
-    if (typeof btnSwitchColorMode === 'object') {
+    if (btnSwitchColorMode && typeof btnSwitchColorMode === 'object') {
       btnSwitchColorMode.checked = true;
     }
   };

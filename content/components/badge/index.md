@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Badge
-description: "Badges are used to inform merchants of the status of an object or of an action that’s been taken."
+description: "Badges are used to inform users of the status of an object or of an action that’s been taken."
 toc: true
 group: data-display
 menu:
@@ -10,9 +10,9 @@ menu:
 
 **Bootstrap 5 Badge component**
 
-Responsive badge built with the latest Bootstrap 5. Badge component is a visual indicator for numeric values such as tallies and scores.
+Responsive badge built with the latest Bootstrap 5. The badge component is a visual indicator for values such as tallies and scores.
 
-Badges are usually placed before or after the label of the thing they're quantifying, such as the number of votes for an issue. 
+Badges are usually placed before or after the label of the thing they're quantifying or referencing, such as the number of votes for an issue. 
 
 ## Badge examples
 
@@ -84,7 +84,7 @@ You can also replace the `.badge` class with a few more utilities without a coun
 
 ## Background colors
 
-Set a background-color with contrasting foreground color with our [.text-bg-{color}]({{< docsref "background-color" >}}) helpers. Previously it was required to manually pair your choice of [.text-{color}]({{< docsref "text-color" >}}) and [.bg-{color}]({{< docsref "background-color" >}}) utilities for styling, which you still may use if you prefer.
+Set a background-color with contrasting foreground color with our [.text-bg-{color}]({{< docsref "background-color" >}}) helpers. Previously, it was required to manually pair your choice of [.text-{color}]({{< docsref "text-color" >}}) and [.bg-{color}]({{< docsref "background-color" >}}) utilities for styling, which you still may use if you prefer.
 
 {{< example >}}
 <span class="badge text-bg-primary">Primary</span>

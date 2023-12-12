@@ -16,7 +16,7 @@ Due to the widespread use of `<table>` elements across third-party widgets like 
 
 ## Basic example
 
-Add the base class `.table` to any `<table>`, then extend with our optional modifier classes or custom styles. 
+Add the base class `.table` to any `<table>`, then extend it with our optional modifier classes or with custom styles. 
 
 {{< example >}}
 <table class="table">
@@ -160,7 +160,7 @@ Add the base class `.table` to any `<table>`, then extend with our optional modi
       <th scope="row">Percentage change</th>
       <td>
         <span class="text-danger">
-          <i class="fas fa-caret-down me-1"></i><span>-48.8%%</span>
+          <i class="fas fa-caret-down me-1"></i><span>-48.8%</span>
         </span>
       </td>
       <td>
@@ -548,7 +548,7 @@ Add `.table-sm` to make any `.table` more compact by cutting all cell padding in
 
 ## Group dividers 
 
-Add a thicker border, darker between table groups—`<thead>`, `<tbody>`, and `<tfoot>`—with `.table-group-divider`.
+Add a thicker, darker border between table groups—`<thead>`, `<tbody>`, and `<tfoot>`—with `.table-group-divider`.
 
 {{< example >}}
 <table class="table">
@@ -587,7 +587,7 @@ Add a thicker border, darker between table groups—`<thead>`, `<tbody>`, and `<
 
 ## Vertical alignment
 
-Table cells of `<thead>` are always vertical aligned to the bottom. Table cells in `<tbody>` inherit their alignment from `<table>` and are aligned to the top by default. 
+Table cells in `<thead>` are always vertically aligned to the bottom. Table cells in `<tbody>` inherit their alignment from `<table>` and are aligned to the top by default. 
 
 Use the vertical align classes to re-align where needed.
 
@@ -693,7 +693,7 @@ Border styles, active styles, and table variants are not inherited by nested tab
 
 To prevent _any_ styles from leaking to nested tables, we use the child combinator (`>`) selector in our CSS. Since we need to target all the `td`s and `th`s in the `thead`, `tbody`, and `tfoot`, our selector would look pretty long without it. As such, we use the rather odd looking `.table > :not(caption) > * > *` selector to target all `td`s and `th`s of the `.table`, but none of any potential nested tables.
 
-Note that if you add `<tr>`s as direct children of a table, those `<tr>` will be wrapped in a `<tbody>` by default, thus making our selectors work as intended.
+Note that if you add `<tr>`s as direct children of a table, those `<tr>`s will be wrapped in a `<tbody>` by default, thus making our selectors work as intended.
 
 ## Anatomy 
 
@@ -818,33 +818,33 @@ A `<caption>` functions like a heading for a table. It helps users with screen r
 {{< example >}}
 <table class="table">
     <caption>List of users</caption>
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td colspan="2">Larry the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
   </table>
   {{</ example >}}
 
@@ -885,7 +885,7 @@ You can also put the `<caption>` on the top of the table with `.caption-top`.
 
 ## Responsive tables
 
-Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by wrapping a `.table` with `.table-responsive`. Or, pick a maximum breakpoint with which to have a responsive table up to by using `.table-responsive{-sm|-md|-lg|-xl|-xxl}`.
+Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by wrapping a `.table` with `.table-responsive`. Or, pick a maximum breakpoint to have a responsive table up to that breakpoint by using `.table-responsive{-sm|-md|-lg|-xl|-xxl}`.
 
 {{< callout warning >}}
 ##### Vertical clipping/truncation

@@ -13,9 +13,9 @@ menu:
 
 Responsive Avatar group built with the latest Bootstrap 5. Avatar group component displays a number of avatars grouped together in a stack.
 
-## Stacked avatar
+## Stacked avatars
 
-Include multiple avatars in stacked.
+Stack multiple avatars together. Notice the small overlap between avatars in the example below.
 
 {{< example >}}
 <div class="avatar-stack">
@@ -30,7 +30,7 @@ Include multiple avatars in stacked.
 
 ## Border color
 
-The color of the border around the avatar. Any color that the CSS border-color property accepts can be used.
+Customize the color of the border around the avatar. Any color that the CSS border-color property accepts can be used.
 
 {{< example >}}
 
@@ -43,7 +43,9 @@ The color of the border around the avatar. Any color that the CSS border-color p
 </div>
 {{</ example >}}
 
-## Grouped avatar
+## Grouped avatars
+
+Avatars can also be grouped together, rather than stacked. Notice the absence of overlap between avatars in the example below (compared to earlier examples of stacked avatars).
 
 {{< example>}}
 <div class="avatar-group">

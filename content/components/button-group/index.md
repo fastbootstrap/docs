@@ -18,20 +18,19 @@ Button groups display multiple buttons with spaces between them out evenly. Just
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-default">Invite</button>
-  <button type="button" class="btn btn-default">Clone</button>
-  <button type="button" class="btn btn-default">Fork</button>
-  <button type="button" class="btn btn-default"><i class="fa-solid fa-ellipsis fa-lg"></i></button>
+  <button type="button" class="btn btn-primary">Left</button>
+  <button type="button" class="btn btn-primary">Middle</button>
+  <button type="button" class="btn btn-primary">Right</button>
 </div>
 {{</ example >}}
 
 For an action or navigation into a line of text, these classes can also be added to links.
 
 {{< example >}}
-<div class="btn-group" role="group" aria-label="Basic example">
-  <a href="#" class="btn btn-default" aria-current="page">Link 1</a>
-  <a href="#" class="btn btn-default">Link 2</a>
-  <a href="#" class="btn btn-default">Link 3</a>
+<div class="btn-group">
+  <a href="#" class="btn btn-primary active" aria-current="page">Active link</a>
+  <a href="#" class="btn btn-primary">Link</a>
+  <a href="#" class="btn btn-primary">Link</a>
 </div>
 {{</ example >}}
 
@@ -45,37 +44,37 @@ In addition, groups and toolbars should be given an explicit label, as most assi
 
 {{</ callout >}}
 
-## Segmented buttons
 
-<span class="lozenge new fs-sm">New Feature</span>
+## Outlined styles
 
-Add a `.btn-group-narrow` to sets of two or more buttons into a one group. The spacing will be compacted between each of group button without no spacing.
+Use the following button styles to show the colors only for the border of the element.
 
 {{< example >}}
-<div class="btn-group btn-group-narrow" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-default">Day</button>
-  <button type="button" class="btn btn-default">Week</button>
-  <button type="button" class="btn btn-default">Month</button>
-  <button type="button" class="btn btn-default">Year</button>
+<div class="btn-group" role="group" aria-label="Basic outlined example">
+  <button type="button" class="btn btn-outline-primary">Left</button>
+  <button type="button" class="btn btn-outline-primary">Middle</button>
+  <button type="button" class="btn btn-outline-primary">Right</button>
 </div>
 {{</ example >}}
 
-The Segmented buttons have 2 types of segmented buttons: `Single-select` and `Multi-select`.
+## Checkbox and radio button groups
+
+Combine button-like checkbox and radio toggle buttons into a seamless looking button group.
 
 ### Single-select
 
 Use a single-select segmented button with [Radio toggle button]({{< docsref "radio#radio-button-group" >}}) to select one option from a set, switch between views, or sort elements from up to five options. 
 
 {{< example >}}
-  <div class="btn-group btn-group-narrow" role="group" aria-label="Basic radio toggle button group">
+  <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
     <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked />
     <label class="btn btn-default" for="btnradio1"><i class="fa-solid fa-align-left"></i></label>
     <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" />
-    <label class="btn btn-default" for="btnradio2"><i class="fa-solid fa-align-center"></i></label>
+    <label class="btn btn-default ms-0" for="btnradio2"><i class="fa-solid fa-align-center"></i></label>
     <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" />
-    <label class="btn btn-default" for="btnradio3"><i class="fa-solid fa-align-right"></i></label>
+    <label class="btn btn-default ms-0" for="btnradio3"><i class="fa-solid fa-align-right"></i></label>
     <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" />
-    <label class="btn btn-default" for="btnradio4"><i class="fa-solid fa-align-justify"></i></label>
+    <label class="btn btn-default ms-0" for="btnradio4"><i class="fa-solid fa-align-justify"></i></label>
   </div>
 {{</ example >}}
 
@@ -84,38 +83,16 @@ Use a single-select segmented button with [Radio toggle button]({{< docsref "rad
 Use a multi-select segmented button with [Checkbox toggle button]({{< docsref "checkbox#checkbox-button-group" >}}) to select or sort from two to five options. 
 
 {{< example >}}
-  <div class="btn-group btn-group-narrow" role="group" aria-label="Basic checkbox toggle button group">
+  <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
     <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" checked />
     <label class="btn btn-default" for="btncheck1"><i class="fa-solid fa-bold"></i></label>
     <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" checked />
     <label class="btn btn-default" for="btncheck2"><i class="fa-solid fa-italic"></i></label>
-    <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off" checked />
+    <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off" />
     <label class="btn btn-default" for="btncheck3"><i class="fa-solid fa-underline"></i></label>
     <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off" />
     <label class="btn btn-default" for="btncheck4"><i class="fa-solid fa-strikethrough"></i></label>
   </div>
-{{</ example >}}
-
-
-### With outlined styles 
-
-Use `.btn-outline-*` to remove all background images, shows colors only for the border of the element.
-
-{{< example class="d-grid justify-content-start gap-4" >}}
-<div class="btn-group btn-group-narrow" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-outline-default">Day</button>
-  <button type="button" class="btn btn-outline-default">Week</button>
-  <button type="button" class="btn btn-outline-default">Month</button>
-  <button type="button" class="btn btn-outline-default">Year</button>
-</div>
-
-<div class="btn-group btn-group-narrow" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-outline-primary">Day</button>
-  <button type="button" class="btn btn-outline-primary">Week</button>
-  <button type="button" class="btn btn-outline-primary">Month</button>
-  <button type="button" class="btn btn-outline-primary">Year</button>
-</div>
-
 {{</ example >}}
 
 ## Selected state
@@ -131,36 +108,24 @@ Adding an `.active` to `.btn` will keep the button in a selected state in the bu
 </div>
 {{</ example >}}
 
-## Outlined styles
-
-Use the following button styles to show the colors only for the border of the element.
-
-{{< example >}}
-<div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-outline-primary">First button</button>
-  <button type="button" class="btn btn-outline-primary">Second button</button>
-  <button type="button" class="btn btn-outline-primary">Third button</button>
-</div>
-{{</ example >}}
-
 ## Button toolbar
 
 Combine sets of button groups into button toolbars for more complex components.
 
 {{< example >}}
 <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-  <div class="btn-group btn-group-narrow" role="group" aria-label="First group">
+  <div class="btn-group" role="group" aria-label="First group">
     <button type="button" class="btn btn-primary">1</button>
     <button type="button" class="btn btn-primary">2</button>
     <button type="button" class="btn btn-primary">3</button>
     <button type="button" class="btn btn-primary">4</button>
   </div>
-  <div class="btn-group btn-group-narrow ms-2" role="group" aria-label="Second group">
+  <div class="btn-group ms-2" role="group" aria-label="Second group">
     <button type="button" class="btn btn-secondary">5</button>
     <button type="button" class="btn btn-secondary">6</button>
     <button type="button" class="btn btn-secondary">7</button>
   </div>
-  <div class="btn-group btn-group-narrow ms-2" role="group" aria-label="Third group">
+  <div class="btn-group ms-2" role="group" aria-label="Third group">
     <button type="button" class="btn btn-default">8</button>
   </div>
 </div>
@@ -170,50 +135,50 @@ Feel free to mix input groups with button groups in your toolbars. Similar to th
 
 {{< example class="d-grid gap-3" >}}
 <div class="btn-toolbar" role="toolbar">
-  <div class="btn-group btn-group-narrow me-3" role="group" aria-label="First group">
+  <div class="btn-group me-3" role="group" aria-label="First group">
     <button type="button" class="btn btn-outline-primary">1</button>
     <button type="button" class="btn btn-outline-primary">2</button>
     <button type="button" class="btn btn-outline-primary">3</button>
     <button type="button" class="btn btn-outline-primary">4</button>
   </div>
-  <div class="input-group">
-    <div class="input-group-text">@</div>
+  <div class="input-group input-group-prefix">    
     <input type="text" class="form-control" placeholder="Input group example" 
     aria-label="Input group example" aria-describedby="btnGroupAddon">
+    <div class="input-group-text">@</div>
   </div>
 </div>
 
 <div class="btn-toolbar justify-content-between" role="toolbar">
-  <div class="btn-group btn-group-narrow me-3" role="group" aria-label="First group">
+  <div class="btn-group me-3" role="group" aria-label="First group">
     <button type="button" class="btn btn-outline-primary">1</button>
     <button type="button" class="btn btn-outline-primary">2</button>
     <button type="button" class="btn btn-outline-primary">3</button>
     <button type="button" class="btn btn-outline-primary">4</button>
   </div>
-  <div class="input-group">
-    <div class="input-group-text">@</div>
+  <div class="input-group input-group-prefix">
     <input type="text" class="form-control" placeholder="Input group example" 
     aria-label="Input group example" aria-describedby="btnGroupAddon2">
+    <div class="input-group-text">@</div>
   </div>
 </div>
 {{</ example >}}
 
 ## Sizes
 
-Instead of applying button sizing classes to every button in a group, just add `.btn-group-{lg|sm}` to each `.btn-group` or `.btn-group btn-group-narrow`, including each one when nesting multiple groups.
+Instead of applying button sizing classes to every button in a group, just add `.btn-group-{lg|sm}` to each `.btn-group` or `.btn-group`, including each one when nesting multiple groups.
 
 {{< example class="d-grid gap-4 auto-cols-min justify-content-start" >}}
-<div class="btn-group btn-group-narrow btn-group-lg" role="group" aria-label="Large button group">
+<div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
   <button type="button" class="btn btn-default">Left</button>
   <button type="button" class="btn btn-default">Middle</button>
   <button type="button" class="btn btn-default">Right</button>
 </div>
-<div class="btn-group btn-group-narrow" role="group" aria-label="Default button group">
+<div class="btn-group" role="group" aria-label="Default button group">
   <button type="button" class="btn btn-default">Left</button>
   <button type="button" class="btn btn-default">Middle</button>
   <button type="button" class="btn btn-default">Right</button>
 </div>
-<div class="btn-group btn-group-narrow btn-group-sm" role="group" aria-label="Small button group">
+<div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
   <button type="button" class="btn btn-default">Left</button>
   <button type="button" class="btn btn-default">Middle</button>
   <button type="button" class="btn btn-default">Right</button>
@@ -225,22 +190,22 @@ Instead of applying button sizing classes to every button in a group, just add `
 Use the `.btn-{color}` to control the appearance of the button in the button group.
 
 {{< example class="d-grid gap-3 auto-cols-min justify-content-start" >}}
-<div class="btn-group btn-group-narrow" role="group">
+<div class="btn-group" role="group">
   <button type="button" class="btn btn-default">Left</button>
   <button type="button" class="btn btn-default">Middle</button>
   <button type="button" class="btn btn-default">Right</button>
 </div>
-<div class="btn-group btn-group-narrow" role="group">
+<div class="btn-group" role="group">
   <button type="button" class="btn btn-primary">Left</button>
   <button type="button" class="btn btn-primary">Middle</button>
   <button type="button" class="btn btn-primary">Right</button>
 </div>
-<div class="btn-group btn-group-narrow" role="group">
+<div class="btn-group" role="group">
   <button type="button" class="btn btn-danger">Left</button>
   <button type="button" class="btn btn-danger">Middle</button>
   <button type="button" class="btn btn-danger">Right</button>
 </div>
-<div class="btn-group btn-group-narrow" role="group">
+<div class="btn-group" role="group">
   <button type="button" class="btn btn-success">Left</button>
   <button type="button" class="btn btn-success">Middle</button>
   <button type="button" class="btn btn-success">Right</button>
@@ -313,7 +278,7 @@ Place a `.btn-group` within another `.btn-group` when you want dropdown menus mi
 
 {{< example >}}
 <div class="btn-toolbar">
-  <div class="btn-group btn-group-narrow" role="group" aria-label="Button group with nested dropdown">
+  <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
     <button type="button" class="btn btn-primary">1</button>
     <button type="button" class="btn btn-primary">2</button>
     <div class="btn-group" role="group">

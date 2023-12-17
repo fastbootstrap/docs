@@ -1,0 +1,56 @@
+{{ $scheme :=  .Get 0 }}
+<table class="table api-class-table">
+  <thead>
+    <tr>
+      <th scope="col" class="">CSS</th>
+      <th scope="col" class="text-nowrap bd-w-24">Swatch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      {{ $bg := printf "bg-%s" $scheme }}
+      <td>
+        <code>.{{ $bg }}</code>
+      </td>
+      <td>
+        <div class="rounded bd-w-44 bd-h-14 {{ $bg }}"></div>
+      </td>
+    </tr>
+    <tr>
+      {{ $bg_subtle := printf "bg-%s-subtle" $scheme }}
+      <td>
+        <code>.{{ $bg_subtle }}</code>
+      </td>
+      <td>
+        <div class="rounded bd-w-44 bd-h-14 {{ $bg_subtle }}"></div>
+      </td>
+    </tr>
+    <tr>
+        {{ $border := printf "border-%s" $scheme }}
+        <td>
+          <code>.{{ $border }}</code>
+        </td>
+        <td>
+          <div class="rounded border border-5 bd-w-44 bd-h-14 {{ $border }}"></div>
+        </td>
+      </tr>
+      <tr>
+        {{ $border_subtle := printf "border-%s-subtle" $scheme }}
+        <td>
+          <code>.{{ $border_subtle }}</code>
+        </td>
+        <td>
+          <div class="rounded border border-5 bd-w-44 bd-h-14 {{ $border_subtle }}"></div>
+        </td>
+      </tr>
+      <tr>
+        {{ $text := printf "text-%s" $scheme }}
+        <td>
+          <code>.{{ $text }}</code>
+        </td>
+        <td>
+          <span class="h5 {{ $text }}">Aa</span>
+        </td>
+      </tr>
+  </tbody>
+</table>

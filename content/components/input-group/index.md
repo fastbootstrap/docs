@@ -55,15 +55,15 @@ Place one add-on or button on either side of an input. You may also place one on
 
 <span class="lozenge new fs-sm">New Feature</span>
 
-Using new utility css `.input-group-start` and `.input-group-end` to make input group as one input that with a new effect.
+Using new utility css `.input-group-prefix` and `.input-group-suffix` to make input group as one input that with a new effect.
 
 {{< example class="d-flex flex-column gap-2" >}}
-<div class="input-group input-group-start mb-3">
+<div class="input-group input-group-prefix mb-3">
   <input type="text" class="form-control" value="2.00"/>
   <span class="input-group-text">$</span>
 </div>
 
-<div class="input-group input-group-start mb-3">
+<div class="input-group input-group-suffix mb-3">
   <input type="text" class="form-control" />
   <span class="input-group-text">https://example.com/users/</span>
 </div>
@@ -81,9 +81,9 @@ Using new utility css `.input-group-start` and `.input-group-end` to make input 
 Input groups wrap by default via `flex-wrap: wrap` in order to accommodate custom form field validation within an input group. You may disable this with `.flex-nowrap`.
 
 {{< example >}}
-<div class="input-group flex-nowrap">
-  <span class="input-group-text" id="addon-wrapping">@</span>
+<div class="input-group input-group-prefix flex-nowrap">
   <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping" />
+  <span class="input-group-text" id="addon-wrapping">@</span>
 </div>
 {{</ example >}}
 
@@ -95,19 +95,19 @@ Add the relative form sizing classes to the `.input-group` itself and contents w
 **Sizing on the individual input group elements isn’t supported.**
 
 {{< example >}}
-<div class="input-group input-group-sm mb-3">
-  <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
+<div class="input-group input-group-prefix input-group-sm mb-3">
   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+  <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
 </div>
 
-<div class="input-group mb-3">
-  <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+<div class="input-group input-group-prefix mb-3">
   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  <span class="input-group-text" id="inputGroup-sizing-default">Medium</span>
 </div>
 
-<div class="input-group input-group-lg">
-  <span class="input-group-text" id="inputGroup-sizing-lg">Large</span>
+<div class="input-group input-group-prefix input-group-lg">
   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+  <span class="input-group-text" id="inputGroup-sizing-lg">Large</span>
 </div>
 {{</ example >}}
 

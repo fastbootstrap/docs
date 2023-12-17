@@ -16,7 +16,7 @@ Download FastBootstrap to get the compiled CSS and JavaScript, source code, or i
 Download ready-to-use compiled code for **FastBootstrap v{{< param "current_version" >}}** to easily drop into your project, which includes:
 
 - Compiled and minified CSS bundles
-- Compiled and minified JavaScript plugins
+- <del>Compiled and minified JavaScript plugins</del>
 
 <a class="btn btn-primary btn-lg" href="{{< param "download.source" >}}">Download</a>
 
@@ -37,7 +37,7 @@ Place this tag in your head.
 Place this tag in your head or just before your close body tag.
 
 ```html
-<script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>
+<script src="{{< param "bootstrap.cdn.js_bundle" >}}" integrity="{{< param "bootstrap.cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
 ```
 
 ## Source files

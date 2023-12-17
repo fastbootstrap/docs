@@ -63,25 +63,10 @@ All flex direction utilities that supports responsive at specific [breakpoints](
 
 The responsive classes are named using the format `order-{breakpoint}-{order}`.
 
-{{< markdown >}}
-{{< flex.inline >}}
-{{- range $bp := $.Site.Data.breakpoints }}
-{{- if ne $bp.abbr "" }}
-{{- range (slice "first" "last") }}
-- `.order{{ $bp.abbr }}-{{ . }}`
-{{- end -}}
-{{- range (seq 0 12) }}
-- `.order{{ $bp.abbr }}-{{ . }}`
-{{- end -}}
-{{- end -}}
-{{- end -}}
-{{< /flex.inline >}}
-{{< /markdown >}}
-
 For example, use `order-md-last` to apply the `order-last` utility at only medium screen sizes and above.
 
 ```html
-<div class="order-first md:order-last">
+<div class="order-first order-md-last">
   <!-- ... -->
 </div>
 ```

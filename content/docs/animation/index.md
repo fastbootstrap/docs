@@ -4,9 +4,10 @@ title: Animation
 description: "Utilities for animating elements with CSS animations."
 toc: true
 status: new
-group: animation
+group: transitions-animation
 menu:
   docs:    
+    weight: 50
 ---
 
 ## Quick reference

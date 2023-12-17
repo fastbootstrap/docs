@@ -61,7 +61,7 @@ Clicking the button below. The toast will be displayed in the bottom-left of the
   <div class="toast" id="liveToast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-body">
       <div class="d-flex gap-4">
-        <span class="text-success"><i class="fa-solid fa-circle-check fa-lg"></i></span>
+        <span><i class="fa-solid fa-circle-check fa-lg icon-success"></i></span>
         <div class="d-flex flex-column flex-grow-1 gap-2">
           <div class="d-flex align-items-center">
             <span class="fw-semibold">#1 Your changes were saved</span>
@@ -93,12 +93,8 @@ Toasts are opt-in for performance reasons, so you must initialize toast yourself
 
 For fancy style? you can create different toast color schemes with our color and background utilities, likes `.text-bg-{color}` to the `.toast`, and then added `.btn-close-white` to our close button.
 
-### Success example
-
-Adding `.text-bg-success` to the `.toast`, and then added `.btn-close-white` to our close button. For a crisp edge, we remove the default border with .border-0.
-
-{{< example >}}
-<div class="toast fade show text-bg-success" role="alert">
+{{< example show_source="false" >}}
+<div class="toast fade show text-bg-primary" role="alert">
   <div class="toast-body">
     <div class="d-flex gap-4">
       <span><i class="fa-solid fa-circle-check fa-lg"></i></span>
@@ -114,12 +110,69 @@ Adding `.text-bg-success` to the `.toast`, and then added `.btn-close-white` to 
 </div>
 {{</ example >}}
 
-### Danger example
+```html
+<div class="toast text-bg-primary" role="alert">
+  <div class="toast-body">
+    <div class="d-flex gap-4">
+      <span><i class="fa-solid fa-circle-check fa-lg"></i></span>
+      <div class="d-flex flex-grow-1 align-items-center">
+        <span class="fw-semibold">Welcome to the room</span>
+        <button type="button" 
+        class="btn-close btn-close-white btn-close-sm ms-auto" 
+        data-bs-dismiss="toast" 
+        aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+</div>
+```
 
-Adding `.text-bg-danger` to the `.toast`, and then added `.btn-close-white` to our close button.
+### Success example
 
-{{< example >}}
-<div class="toast fade show text-bg-danger" role="alert">
+Adding `.text-bg-success` to the `.toast`, and then added `.btn-close-white` to our close button.
+
+{{< example show_source="false" >}}
+<button class="btn btn-success" data-example-toggle="toast" data-example-target="#liveSuccessToast">Success toast</button>
+<div class="toast-container position-fixed bottom-0 start-50 translate-middle p-6">
+<div class="toast fade text-bg-success" id="liveSuccessToast" role="alert">
+  <div class="toast-body">
+    <div class="d-flex gap-4">
+      <span><i class="fa-solid fa-circle-check fa-lg"></i></span>
+      <div class="d-flex flex-grow-1 align-items-center">
+        <span class="fw-semibold">Welcome to the room</span>
+        <button type="button" 
+        class="btn-close btn-close-white btn-close-sm ms-auto" 
+        data-bs-dismiss="toast" 
+        aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{{</ example >}}
+
+```html
+<div class="toast text-bg-success" role="alert">
+  <div class="toast-body">
+    <div class="d-flex gap-4">
+      <span><i class="fa-solid fa-circle-check fa-lg"></i></span>
+      <div class="d-flex flex-grow-1 align-items-center">
+        <span class="fw-semibold">Welcome to the room</span>
+        ...
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+### Error example
+
+Adding `.text-bg-danger` to the `.toast`.
+
+{{< example show_source="false" >}}
+<button class="btn btn-danger" data-example-toggle="toast" data-example-target="#exampleErrorToast">Error toast</button>
+<div class="toast-container position-fixed bottom-0 start-50 translate-middle p-6">
+<div class="toast fade text-bg-danger" id="exampleErrorToast" role="alert">
   <div class="toast-body">
     <div class="d-flex gap-4">
       <span><i class="fa-solid fa-circle-exclamation fa-lg"></i></span>
@@ -133,14 +186,31 @@ Adding `.text-bg-danger` to the `.toast`, and then added `.btn-close-white` to o
     </div>
   </div>
 </div>
+</div>
 {{</ example >}}
+
+```html
+<div class="toast text-bg-danger" role="alert">
+  <div class="toast-body">
+    <div class="d-flex gap-4">
+      <span><i class="fa-solid fa-circle-exclamation fa-lg"></i></span>
+      <div class="d-flex flex-grow-1 align-items-center">
+        <span class="fw-semibold">We are having issues</span>
+        ...
+      </div>
+    </div>
+  </div>
+</div>
+```
 
 ### Warning example
 
-Adding `.text-bg-warning` to the `.toast`, and then added `.btn-close-black` to our close button.
+Adding `.text-bg-warning` to the `.toast`.
 
-{{< example >}}
-<div class="toast fade show text-bg-warning" role="alert">
+{{< example show_source="false" >}}
+<button class="btn btn-warning" data-example-toggle="toast" data-example-target="#exampleWarningToast">Warning toast</button>
+<div class="toast-container position-fixed bottom-0 start-50 translate-middle p-6">
+<div class="toast fade text-bg-warning" role="alert" id="exampleWarningToast">
   <div class="toast-body">
     <div class="d-flex gap-4">
       <span><i class="fa-solid fa-triangle-exclamation fa-lg"></i></span>
@@ -154,8 +224,22 @@ Adding `.text-bg-warning` to the `.toast`, and then added `.btn-close-black` to 
     </div>
   </div>
 </div>
+</div>
 {{</ example >}}
 
+```html
+<div class="toast text-bg-warning" role="alert">
+  <div class="toast-body">
+    <div class="d-flex gap-4">
+      <span><i class="fa-solid fa-triangle-exclamation fa-lg"></i></span>
+      <div class="d-flex flex-grow-1 align-items-center">
+        <span class="fw-semibold">Trying again...</span>
+        ...
+      </div>
+    </div>
+  </div>
+</div>
+```
 
 ## Placement 
 

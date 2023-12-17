@@ -85,12 +85,7 @@
     btnToActive.setAttribute('aria-pressed', 'true');
     if (focus) {
       themeSwitcher.focus();
-    }
-    // home components preview
-    const btnSwitchColorMode = document.querySelector(`input[name="btnColorMode"][value="${theme}"]`);
-    if (btnSwitchColorMode && typeof btnSwitchColorMode === 'object') {
-      btnSwitchColorMode.checked = true;
-    }
+    }   
   };
 
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
@@ -110,14 +105,6 @@
         setTheme(theme);
         showActiveTheme(theme, true);
       });
-    });
-
-    document.querySelectorAll('input[name="btnColorMode"]').forEach((elem) => {
-      elem.addEventListener('change', (e) => {
-        setStoredTheme(elem.value);
-        setTheme(elem.value);
-        showActiveTheme(elem.value, false);
-      });
-    });
+    });    
   });
 })();

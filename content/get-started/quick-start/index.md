@@ -44,7 +44,7 @@ Next include FastBootstrap's CSS and JS. Place the `<link>` tag in the `<head>` 
   </head>
   <body>
     <h1>Hello, world!</h1>
-    <script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>
+    <script src="{{< param "bootstrap.cdn.js_bundle" >}}" integrity="{{< param "bootstrap.cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
   </body>
 </html>
 ```
@@ -59,7 +59,7 @@ As reference, here are our primary CDN links.
 | Description | URL |
 | --- | --- |
 | CSS | `{{< param "cdn.css" >}}` |
-| JS | `{{< param "cdn.js" >}}` |
+| JS | `{{< param "bootstrap.cdn.js_bundle" >}}` |
 {{< /bs-table >}}
 
 ## Important globals 

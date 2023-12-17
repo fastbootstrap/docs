@@ -1,15 +1,11 @@
-$enable-cssgrid: true;
 @import "node_modules/bootstrap/scss/functions";
-@import "node_modules/bootstrap/scss/variables";
-@import "node_modules/bootstrap/scss/variables-dark";
-@import "node_modules/bootstrap/scss/maps";
 @import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/variables";
 @import "node_modules/fastbootstrap/src/scss/variables-tokens";
-@import "node_modules/bootstrap/scss/grid";
 
 @import "prism";
 @import "prism-dark";
-
+@import "css-grid";
 @import "colors";
 @import "dark";
 @import "layout";

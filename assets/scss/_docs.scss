@@ -1,6 +1,6 @@
 code {
-  background-color: var(--ds-background-neutral);
-  color: var(--ds-text);
+  background-color: transparent;
+  color: var(--ds-text-accent-magenta);
   padding: 2px 4px;
   border-radius: 3px;
   overflow-wrap: break-word;
@@ -27,12 +27,16 @@ code {
   grid-area: content;
   position: relative;
 
+  strong {
+    font-weight: 500;
+  }
+
   > h2,
   > h3,
   > h4,
   > h5,
   > h6 {
-    margin-top: 8px;
+    margin-top: 24px;
     margin-bottom: 16px;
 
     &:first-child {
@@ -192,5 +196,25 @@ code {
     color: var(--ds-text-accent-teal);
     font-family: var(--bs-font-monospace);
     letter-spacing: -0.15px;
+  }
+}
+
+.api-class-table-scroll {
+  --scrollbar-thumb: var(--ds-background-accent-gray-subtle);
+  --scrollbar-track: var(--ds-background-accent-gray-subtlest);
+  max-height: 24rem;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track);
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border-radius: 4px;
   }
 }

@@ -9,7 +9,7 @@
 {{- $scroll := .Get 1 | default false -}}
 
 
-<div {{ if $scroll }}class="overflow-y-auto w-100 mb-3" style="max-height:24rem"{{ else }}class="mb-3"{{ end }}>
+<div {{ if $scroll }}class="overflow-y-auto w-100 mb-3 shadow-sm api-class-table-scroll"{{ else }}class="mb-3"{{ end }}>
   <table class="api-class-table table align-middle fs-sm">
     <thead>
       <tr class="text-dark">
@@ -32,11 +32,16 @@
               {{ range $key, $value = . }}
               {{ end }}
             {{ end }}
+            {{ $rem2px := ""}}
+            {{if hasSuffix $value "rem" }}
+              {{ $num := mul (float (replace $value "rem" "")) 16 }}
+              {{ $rem2px = printf "<span class='text-body-tertiary opacity-75'>/* %.0fpx */</span>" $num }}
+            {{ end }}
             {{ $class :=trim (printf $format $prefix (string $key)) "-" }}
             {{ $styles := slice }}
             {{ range split $properties " " }}
               {{ $property := trim . "" }}
-              {{ $styles = $styles | append ( printf "%s: %s;" $property (string $value)) }}
+              {{ $styles = $styles | append ( printf "%s: %s; %s" $property (string $value) $rem2px)  }}
             {{ end }}
             <tr>
               <td class="text-nowrap"><code>{{ printf ".%s" $class }}</code></td>

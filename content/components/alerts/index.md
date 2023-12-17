@@ -22,6 +22,22 @@ Alerts are available for any length of text, as well as an optional close button
 
 By default, alert does not apply any style, use one of the eight required contextual classes (e.g., `.alert-success`) for proper styling. For inline dismissal, use the alerts JavaScript plugin.
 
+### Primary
+
+Add `.alert-primary` to the alert.
+
+{{< example >}}
+<div class="alert alert-primary" role="alert">
+  <div class="d-flex gap-4">
+    <span><i class="fa-solid fa-circle-info icon-primary"></i></span>
+    <div class="d-flex flex-column gap-2">
+      <h6 class="mb-0">Editing is restricted</h6>
+      <p class="mb-0">You're not allowed to change these restrictions...</p>
+    </div>
+  </div>
+</div>
+{{</ example >}}
+
 ### Success
 
 Add `.alert-success` to the `.alert`.
@@ -29,7 +45,7 @@ Add `.alert-success` to the `.alert`.
 {{< example >}}
 <div class="alert alert-success" role="alert">
   <div class="d-flex gap-4">
-    <span><i class="fa-solid fa-circle-check text-success"></i></span>
+    <span><i class="fa-solid fa-circle-check icon-success"></i></span>
     <div>
       File has been uploaded.
     </div>
@@ -44,7 +60,7 @@ Add `.alert-danger` to the `.alert`.
 {{< example >}}
 <div class="alert alert-danger" role="alert">
   <div class="d-flex gap-4">
-    <span><i class="fa-solid fa-circle-exclamation text-danger"></i></span>
+    <span><i class="fa-solid fa-circle-exclamation icon-danger"></i></span>
     <div class="d-flex flex-column gap-2">
       <h6 class="mb-0">This account has been permanently deleted</h6>
       <p class="mb-0">The user `IanAtlas` no longer has access to Atlassian services.</p>
@@ -60,7 +76,7 @@ Add `.alert-warning` to the `.alert`.
 {{< example >}}
 <div class="alert alert-warning" role="alert">
   <div class="d-flex gap-4">
-    <span><i class="fa-solid fa-circle-exclamation text-warning"></i></span>
+    <span><i class="fa-solid fa-circle-exclamation icon-warning"></i></span>
     <div class="d-flex flex-column gap-2">
       <h6 class="mb-0">Cannot connect to the database</h6>
       <p class="mb-0">We are unable to save any progress at this time.</p>
@@ -69,17 +85,17 @@ Add `.alert-warning` to the `.alert`.
 </div>
 {{</ example >}}
 
-### Primary
+### Discovery
 
-Add `.alert-primary` to the alert.
+Add `.alert-discovery` to the alert.
 
 {{< example >}}
-<div class="alert alert-primary" role="alert">
+<div class="alert alert-discovery" role="alert">
   <div class="d-flex gap-4">
-    <span><i class="fa-solid fa-circle-info text-primary"></i></span>
+    <span><i class="fa-solid fa-circle-question icon-discovery"></i></span>
     <div class="d-flex flex-column gap-2">
-      <h6 class="mb-0">Editing is restricted</h6>
-      <p class="mb-0">You're not allowed to change these restrictions. It's either due to the restrictions on the page, or permission settings for this space.</p>
+      <h6 class="mb-0">From the angle of the mountain</h6>
+      <p class="mb-0">To the sand on our island shore. I've been here before.</p>
     </div>
   </div>
 </div>
@@ -87,38 +103,21 @@ Add `.alert-primary` to the alert.
 
 ### More styles
 
-Add `.alert-secondary` to the alert.
 
 {{< example >}}
 <div class="alert alert-secondary" role="alert">
   A simple secondary alert—check it out!
 </div>
-{{</ example >}}
-
-Add `.alert-info` to the alert for display information.
-
-{{< example >}}
 <div class="alert alert-info" role="alert">
   A simple info alert—check it out!
 </div>
-{{</ example >}}
-
-Add `.alert-light` to the alert.
-
-{{< example >}}
 <div class="alert alert-light" role="alert">
   A simple light alert—check it out!
 </div>
-{{</ example >}}
-
-Add `.alert-dark` to the alert.
-
-{{< example >}}
 <div class="alert alert-dark" role="alert">
   A simple dark alert—check it out!
 </div>
 {{</ example >}}
-
 
 ## Description
 
@@ -167,7 +166,7 @@ Default link color.
 {{< example >}}
 <div class="alert alert-primary" role="alert">
   <div class="d-flex gap-4">
-    <span><i class="fa-solid fa-circle-info text-primary"></i></span>
+    <span><i class="fa-solid fa-circle-info icon-primary"></i></span>
     <div class="d-flex flex-column gap-2">
       <h6 class="mb-0">Editing is restricted</h6>
       <p class="mb-0">

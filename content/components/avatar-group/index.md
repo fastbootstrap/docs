@@ -27,19 +27,15 @@ Include multiple avatars in stacked.
 </div>
 {{</ example >}}
 
-
-## Border color
-
-The color of the border around the avatar. Any color that the CSS border-color property accepts can be used.
+### Reversing avatars
 
 {{< example >}}
-
-<div class="avatar-stack avatar-stack-reverse">
-    <span class="avatar border-danger">+6</span>
-    <img class="avatar border-danger" src="/images/avatar/1.jpg" />
-    <img class="avatar border-danger" src="/images/avatar/2.jpg" />
-    <img class="avatar border-danger" src="/images/avatar/4.jpg" />
-    <img class="avatar border-danger" src="/images/avatar/5.jpg" />
+<div class="avatar-stack justify-content-start flex-row">
+    <img class="avatar" src="/images/avatar/1.jpg" />
+    <img class="avatar" src="/images/avatar/2.jpg" />
+    <img class="avatar" src="/images/avatar/4.jpg" />
+    <img class="avatar" src="/images/avatar/5.jpg" />
+    <span class="avatar">+6</span>
 </div>
 {{</ example >}}
 
@@ -50,8 +46,24 @@ The color of the border around the avatar. Any color that the CSS border-color p
     <img class="avatar" src="/images/avatar/1.jpg" />
     <img class="avatar" src="/images/avatar/2.jpg" />
     <img class="avatar" src="/images/avatar/4.jpg" />
+    <img class="avatar" src="/images/avatar/3.jpg" />
     <img class="avatar" src="/images/avatar/5.jpg" />
     <span class="avatar">+6</span>
+</div>
+{{</ example >}}
+
+
+## Border color
+
+The color of the border around the avatar. Any color that the CSS border-color property accepts can be used.
+
+{{< example >}}
+<div class="avatar-stack avatar-stack-reverse">
+    <span class="avatar border-danger">+6</span>
+    <img class="avatar border-danger" src="/images/avatar/1.jpg" />
+    <img class="avatar border-danger" src="/images/avatar/2.jpg" />
+    <img class="avatar border-danger" src="/images/avatar/4.jpg" />
+    <img class="avatar border-danger" src="/images/avatar/5.jpg" />
 </div>
 {{</ example >}}
 

@@ -1,4 +1,4 @@
-{{- $css_class := .Get 0 | default "info" -}}
+{{- $css_class := .Get 0 | default "discovery" -}}
 
 
 <section class="alert alert-{{ $css_class }} my-5" role="alert">
@@ -10,7 +10,7 @@
     {{- else if eq $css_class "secondary" -}}
       <span><i class="fa-solid fa-circle-question icon-secondary fa-lg"></i></span>
     {{- else -}}
-      <span><i class="fa-solid fa-circle-info icon-info fa-lg"></i></span>
+      <span><i class="fa-solid fa-circle-info icon-discovery fa-lg"></i></span>
     {{- end -}}
     <div>
       {{ .Inner | markdownify }}

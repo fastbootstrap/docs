@@ -50,6 +50,18 @@ Use `.btn-default` to a standard button for form actions and general page action
 <button type="button" class="btn btn-default active">Selected</button>
 {{</ example >}}
 
+### Discovery button 
+
+<span class="lozenge new fs-sm">New Feature</span>
+
+Use `.btn-discovery` to a standard button for form actions and general page actions.
+
+{{< example class="d-flex align-items-start gap-2 flex-wrap" >}}
+<button type="button" class="btn btn-discovery">Discovery button</button>
+<button type="button" class="btn btn-discovery" disabled>Disabled</button>
+<button type="button" class="btn btn-discovery active">Selected</button>
+{{</ example >}}
+
 ### Primary button
 
 Use a primary button to call attention to an action on a form or to highlight the strongest call to action on a page. Primary buttons should only appear once per container (not including the application header or in a modal dialog). Not every screen requires a primary button. Add `.btn-primary`.
@@ -149,6 +161,7 @@ The below outline buttons that used by Bootstrap by add `.btn-outline-*`.
 <button type="button" class="btn btn-outline-danger">Danger</button>
 <button type="button" class="btn btn-outline-warning">Warning</button>
 <button type="button" class="btn btn-outline-info">Info</button>
+<button type="button" class="btn btn-outline-discovery">Discovery</button>
 <button type="button" class="btn btn-outline-light">Light</button>
 <button type="button" class="btn btn-outline-dark">Dark</button>
 {{</ example >}}

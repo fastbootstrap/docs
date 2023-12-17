@@ -36,7 +36,7 @@ Utilities for controlling the stack order of an element.
 <div class="z-0 ...">01</div>
 ```
 
-## The `z-index` table of components
+## The z-index table of Bootstrap components
 
 While not a part of Bootstrap's grid system, z-indexes play an important part in how our components overlay and interact with one another.
 

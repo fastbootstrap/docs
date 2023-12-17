@@ -1,10 +1,12 @@
 docs:
+  - name: base-stypes
+    title: Base Styles
   - name: grid-system
     title: Grid System
-  - name: layout
-    title: Layout
   - name: flexbox
     title: Flexbox & Grid
+  - name: layout
+    title: Layout
   - name: spacing
     title: Spacing
   - name: sizing
@@ -17,14 +19,14 @@ docs:
     title: Borders
   - name: effects
     title: Effects
+  - name: transitions-animation
+    title: Transitions & Animation
   - name: transforms
     title: Transforms
-  - name: animation
-    title: Animation
   - name: interactivity
     title: Interactivity
-  - name: base-stypes
-    title: Base Styles
+  - name: icon
+    title: Icon
 components:    
   - name: actions
     title: Actions

@@ -19,6 +19,8 @@ font-weight:
   - property: font-weight
     class: fw
     values:
+      - thin: 100
+      - extralight: 200
       - lighter: lighter
       - light: 300
       - normal: 400
@@ -26,6 +28,7 @@ font-weight:
       - semibold: 600
       - bold: 700
       - bolder: bolder
+      - black: 900
 font-size:
   - property: font-size
     class: lead
@@ -222,25 +225,6 @@ margin:
       - 14: 3.5rem
       - 16: 4rem
       - 20: 5rem
-      - 24: 6rem
-      - 28: 7rem
-      - 32: 8rem
-      - 36: 9rem
-      - 40: 10rem
-      - 44: 11rem
-      - 48: 12rem
-      - 52: 13rem
-      - 56: 14rem
-      - 60: 15rem
-      - 64: 16rem
-      - 68: 17rem
-      - 72: 18rem
-      - 76: 19rem
-      - 80: 20rem
-      - 84: 21rem
-      - 88: 22rem
-      - 92: 23rem
-      - 96: 24rem
       - auto
   - property: margin-left margin-right
     responsive: true
@@ -262,25 +246,6 @@ margin:
       - 14: 3.5rem
       - 16: 4rem
       - 20: 5rem
-      - 24: 6rem
-      - 28: 7rem
-      - 32: 8rem
-      - 36: 9rem
-      - 40: 10rem
-      - 44: 11rem
-      - 48: 12rem
-      - 52: 13rem
-      - 56: 14rem
-      - 60: 15rem
-      - 64: 16rem
-      - 68: 17rem
-      - 72: 18rem
-      - 76: 19rem
-      - 80: 20rem
-      - 84: 21rem
-      - 88: 22rem
-      - 92: 23rem
-      - 96: 24rem
       - auto
   - property: margin-top margin-bottom
     responsive: true
@@ -302,25 +267,6 @@ margin:
       - 14: 3.5rem
       - 16: 4rem
       - 20: 5rem
-      - 24: 6rem
-      - 28: 7rem
-      - 32: 8rem
-      - 36: 9rem
-      - 40: 10rem
-      - 44: 11rem
-      - 48: 12rem
-      - 52: 13rem
-      - 56: 14rem
-      - 60: 15rem
-      - 64: 16rem
-      - 68: 17rem
-      - 72: 18rem
-      - 76: 19rem
-      - 80: 20rem
-      - 84: 21rem
-      - 88: 22rem
-      - 92: 23rem
-      - 96: 24rem
       - auto
   - property: margin-top
     responsive: true
@@ -342,25 +288,6 @@ margin:
       - 14: 3.5rem
       - 16: 4rem
       - 20: 5rem
-      - 24: 6rem
-      - 28: 7rem
-      - 32: 8rem
-      - 36: 9rem
-      - 40: 10rem
-      - 44: 11rem
-      - 48: 12rem
-      - 52: 13rem
-      - 56: 14rem
-      - 60: 15rem
-      - 64: 16rem
-      - 68: 17rem
-      - 72: 18rem
-      - 76: 19rem
-      - 80: 20rem
-      - 84: 21rem
-      - 88: 22rem
-      - 92: 23rem
-      - 96: 24rem
       - auto
   - property: margin-bottom
     responsive: true
@@ -382,25 +309,6 @@ margin:
       - 14: 3.5rem
       - 16: 4rem
       - 20: 5rem
-      - 24: 6rem
-      - 28: 7rem
-      - 32: 8rem
-      - 36: 9rem
-      - 40: 10rem
-      - 44: 11rem
-      - 48: 12rem
-      - 52: 13rem
-      - 56: 14rem
-      - 60: 15rem
-      - 64: 16rem
-      - 68: 17rem
-      - 72: 18rem
-      - 76: 19rem
-      - 80: 20rem
-      - 84: 21rem
-      - 88: 22rem
-      - 92: 23rem
-      - 96: 24rem
       - auto
   - property: margin-left
     responsive: true
@@ -422,25 +330,6 @@ margin:
       - 14: 3.5rem
       - 16: 4rem
       - 20: 5rem
-      - 24: 6rem
-      - 28: 7rem
-      - 32: 8rem
-      - 36: 9rem
-      - 40: 10rem
-      - 44: 11rem
-      - 48: 12rem
-      - 52: 13rem
-      - 56: 14rem
-      - 60: 15rem
-      - 64: 16rem
-      - 68: 17rem
-      - 72: 18rem
-      - 76: 19rem
-      - 80: 20rem
-      - 84: 21rem
-      - 88: 22rem
-      - 92: 23rem
-      - 96: 24rem
       - auto
   - property: margin-right
     responsive: true
@@ -462,25 +351,6 @@ margin:
       - 14: 3.5rem
       - 16: 4rem
       - 20: 5rem
-      - 24: 6rem
-      - 28: 7rem
-      - 32: 8rem
-      - 36: 9rem
-      - 40: 10rem
-      - 44: 11rem
-      - 48: 12rem
-      - 52: 13rem
-      - 56: 14rem
-      - 60: 15rem
-      - 64: 16rem
-      - 68: 17rem
-      - 72: 18rem
-      - 76: 19rem
-      - 80: 20rem
-      - 84: 21rem
-      - 88: 22rem
-      - 92: 23rem
-      - 96: 24rem
       - auto
 padding:
   - property: padding
@@ -502,25 +372,6 @@ padding:
       - 14: 3.5rem
       - 16: 4rem
       - 20: 5rem
-      - 24: 6rem
-      - 28: 7rem
-      - 32: 8rem
-      - 36: 9rem
-      - 40: 10rem
-      - 44: 11rem
-      - 48: 12rem
-      - 52: 13rem
-      - 56: 14rem
-      - 60: 15rem
-      - 64: 16rem
-      - 68: 17rem
-      - 72: 18rem
-      - 76: 19rem
-      - 80: 20rem
-      - 84: 21rem
-      - 88: 22rem
-      - 92: 23rem
-      - 96: 24rem
   - property: padding-left padding-right
     class: px
     values:
@@ -540,25 +391,6 @@ padding:
       - 14: 3.5rem
       - 16: 4rem
       - 20: 5rem
-      - 24: 6rem
-      - 28: 7rem
-      - 32: 8rem
-      - 36: 9rem
-      - 40: 10rem
-      - 44: 11rem
-      - 48: 12rem
-      - 52: 13rem
-      - 56: 14rem
-      - 60: 15rem
-      - 64: 16rem
-      - 68: 17rem
-      - 72: 18rem
-      - 76: 19rem
-      - 80: 20rem
-      - 84: 21rem
-      - 88: 22rem
-      - 92: 23rem
-      - 96: 24rem
   - property: padding-top padding-bottom
     class: py
     values:
@@ -578,25 +410,6 @@ padding:
       - 14: 3.5rem
       - 16: 4rem
       - 20: 5rem
-      - 24: 6rem
-      - 28: 7rem
-      - 32: 8rem
-      - 36: 9rem
-      - 40: 10rem
-      - 44: 11rem
-      - 48: 12rem
-      - 52: 13rem
-      - 56: 14rem
-      - 60: 15rem
-      - 64: 16rem
-      - 68: 17rem
-      - 72: 18rem
-      - 76: 19rem
-      - 80: 20rem
-      - 84: 21rem
-      - 88: 22rem
-      - 92: 23rem
-      - 96: 24rem
   - property: padding-top
     class: pt
     values:
@@ -616,25 +429,6 @@ padding:
       - 14: 3.5rem
       - 16: 4rem
       - 20: 5rem
-      - 24: 6rem
-      - 28: 7rem
-      - 32: 8rem
-      - 36: 9rem
-      - 40: 10rem
-      - 44: 11rem
-      - 48: 12rem
-      - 52: 13rem
-      - 56: 14rem
-      - 60: 15rem
-      - 64: 16rem
-      - 68: 17rem
-      - 72: 18rem
-      - 76: 19rem
-      - 80: 20rem
-      - 84: 21rem
-      - 88: 22rem
-      - 92: 23rem
-      - 96: 24rem
   - property: padding-bottom
     class: pb
     values:
@@ -654,25 +448,6 @@ padding:
       - 14: 3.5rem
       - 16: 4rem
       - 20: 5rem
-      - 24: 6rem
-      - 28: 7rem
-      - 32: 8rem
-      - 36: 9rem
-      - 40: 10rem
-      - 44: 11rem
-      - 48: 12rem
-      - 52: 13rem
-      - 56: 14rem
-      - 60: 15rem
-      - 64: 16rem
-      - 68: 17rem
-      - 72: 18rem
-      - 76: 19rem
-      - 80: 20rem
-      - 84: 21rem
-      - 88: 22rem
-      - 92: 23rem
-      - 96: 24rem
   - property: padding-left
     class: ps
     values:
@@ -692,25 +467,6 @@ padding:
       - 14: 3.5rem
       - 16: 4rem
       - 20: 5rem
-      - 24: 6rem
-      - 28: 7rem
-      - 32: 8rem
-      - 36: 9rem
-      - 40: 10rem
-      - 44: 11rem
-      - 48: 12rem
-      - 52: 13rem
-      - 56: 14rem
-      - 60: 15rem
-      - 64: 16rem
-      - 68: 17rem
-      - 72: 18rem
-      - 76: 19rem
-      - 80: 20rem
-      - 84: 21rem
-      - 88: 22rem
-      - 92: 23rem
-      - 96: 24rem
   - property: padding-right
     class: pe
     values:
@@ -730,25 +486,6 @@ padding:
       - 14: 3.5rem
       - 16: 4rem
       - 20: 5rem
-      - 24: 6rem
-      - 28: 7rem
-      - 32: 8rem
-      - 36: 9rem
-      - 40: 10rem
-      - 44: 11rem
-      - 48: 12rem
-      - 52: 13rem
-      - 56: 14rem
-      - 60: 15rem
-      - 64: 16rem
-      - 68: 17rem
-      - 72: 18rem
-      - 76: 19rem
-      - 80: 20rem
-      - 84: 21rem
-      - 88: 22rem
-      - 92: 23rem
-      - 96: 24rem
 opacity:
   - property: opacity
     values:
@@ -920,14 +657,59 @@ gap:
       - 8: 2rem
       - 9: 2.25rem
       - 10: 2.5rem
+      - 11: 2.75rem
+      - 12: 3rem
+      - 14: 3.5rem
+      - 16: 4rem
+      - 20: 5rem
+  - property: row-gap
+    responsive: true
+    class: row-gap
+    values:
+      - 0
+      - 1: 0.25rem
+      - 2: 0.5rem
+      - 3: 0.75rem
+      - 4: 1rem
+      - 5: 1.25rem
+      - 6: 1.5rem
+      - 7: 1.75rem
+      - 8: 2rem
+      - 9: 2.25rem
+      - 10: 2.5rem
+      - 11: 2.75rem
+      - 12: 3rem
+      - 14: 3.5rem
+      - 16: 4rem
+      - 20: 5rem
+  - property: column-gap
+    responsive: true
+    class: column-gap
+    values:
+      - 0
+      - 1: 0.25rem
+      - 2: 0.5rem
+      - 3: 0.75rem
+      - 4: 1rem
+      - 5: 1.25rem
+      - 6: 1.5rem
+      - 7: 1.75rem
+      - 8: 2rem
+      - 9: 2.25rem
+      - 10: 2.5rem
+      - 11: 2.75rem
+      - 12: 3rem
+      - 14: 3.5rem
+      - 16: 4rem
+      - 20: 5rem 
 flex-direction:
   - property: flex-direction
     responsive: true
     class: flex
     values:
       - row
-      - column
       - row-reverse
+      - column
       - column-reverse
 flex-wrap:
   - property: flex-wrap
@@ -960,12 +742,6 @@ order:
       - 4: 4
       - 5: 5
       - 6: 6
-      - 7: 7
-      - 8: 8
-      - 9: 9
-      - 10: 10
-      - 11: 11
-      - 12: 12
       - first: -9999
       - last: 9999
 clear:
@@ -1018,7 +794,9 @@ flex:
   - property: flex
     responsive: true
     values:
+      - 1: 1 1 0%
       - fill: 1 1 auto
+      - none: none
 gutter:
   - property: --bs-gutter-x --bs-gutter-y
     responsive: true
@@ -1036,7 +814,7 @@ gutter:
       - 9: 2.25rem
       - 10: 2.5rem
 gutter-x:
-  - property: --bs-gutter-x
+  - property: margin-left margin-right
     responsive: true
     class: gx
     values:
@@ -1052,7 +830,7 @@ gutter-x:
       - 9: 2.25rem
       - 10: 2.5rem
 gutter-y:
-  - property: --bs-gutter-y
+  - property: margin-top margin-bottom
     responsive: true
     class: gy
     values:
@@ -1107,6 +885,11 @@ rotate:
     values:
       - none: none
       - 0: rotate(0deg)
+      - 1: rotate(1deg)
+      - 2: rotate(2deg)
+      - 3: rotate(3deg)
+      - 6: rotate(6deg)
+      - 12: rotate(12deg)
       - 45: rotate(45deg)
       - 90: rotate(90deg)
       - 180: rotate(180deg)
@@ -1161,6 +944,7 @@ text-color:
     class: text
     values:
       - primary: text-primary
+      - discovery: text-discovery
       - secondary: text-secondary
       - success: text-success
       - danger: text-danger
@@ -1183,6 +967,8 @@ bg-color:
       - black: bg-black
       - primary: bg-primary
       - primary-subtle: bg-primary-subtle
+      - discovery: bg-discovery
+      - discovery-subtle: bg-discovery-subtle
       - secondary: bg-secondary
       - secondary-subtle: bg-secondary-subtle
       - success: bg-success
@@ -1207,6 +993,8 @@ border-color:
       - black: border-black
       - primary: border-primary
       - primary-subtle: border-primary-subtle
+      - discovery: border-discovery
+      - discovery-subtle: border-discovery-subtle
       - secondary: border-secondary
       - secondary-subtle: border-secondary-subtle
       - success: border-success
@@ -1221,3 +1009,180 @@ border-color:
       - light-subtle: border-light-subtle
       - dark: border-dark
       - dark-subtle: border-dark-subtle
+icon-color:
+  - property: color
+    class: icon
+    values:
+      - body: icon-body
+      - primary: icon-primary
+      - discovery: icon-discovery
+      - success: icon-success
+      - danger: icon-danger
+      - warning: icon-warning
+      - info: icon-info
+skew:
+  - property: transform
+    class: skew-x
+    values:
+      - 0: skewX(0deg)
+      - 1: skewX(1deg)
+      - 2: skewX(2deg)
+      - 3: skewX(3deg)
+      - 6: skewX(6deg)
+      - 12: skewX(12deg)
+  - property: transform
+    class: skew-y
+    values:
+      - 0: skewY(0deg)
+      - 1: skewY(1deg)
+      - 2: skewY(2deg)
+      - 3: skewY(3deg)
+      - 6: skewY(6deg)
+      - 12: skewY(12deg)
+scale:
+  - property: transform
+    class: scale
+    values:
+      - 0: scale(0)
+      - 50: scale(.5)
+      - 75: scale(.75)
+      - 90: scale(.9)
+      - 95: scale(.95)
+      - 100: scale(1)
+      - 105: scale(1.05)
+      - 110: scale(1.1)
+      - 125: scale(1.25)
+  - property: transform
+    class: scale-x
+    values:
+      - 0: scaleX(0)
+      - 50: scaleX(.5)
+      - 75: scaleX(.75)
+      - 90: scaleX(.9)
+      - 95: scaleX(.95)
+      - 100: scaleX(1)
+      - 105: scaleX(1.05)
+      - 110: scaleX(1.1)
+      - 125: scaleX(1.25)
+  - property: transform
+    class: scale-y
+    values:
+      - 0: scaleY(0)
+      - 50: scaleY(.5)
+      - 75: scaleY(.75)
+      - 90: scaleY(.9)
+      - 95: scaleY(.95)
+      - 100: scaleY(1)
+      - 105: scaleY(1.05)
+      - 110: scaleY(1.1)
+      - 125: scaleY(1.25)
+origin:
+  - property: transform-origin
+    class: origin
+    values:
+      - center: center
+      - top: top
+      - top-right: top right
+      - right: right
+      - bottom-right: bottom right
+      - bottom: bottom
+      - bottom-left: bottom left
+      - left: left
+      - top-left: top left
+translate:
+  - property: transform
+    class: translate-x
+    values:
+      - 0: translateX(0px)
+      - px: translateX(1px)
+      - 1: translateX(0.25rem)
+      - 2: translateX(0.5rem)
+      - 3: translateX(0.75rem)
+      - 4: translateX(1rem)
+      - 5: translateX(1.25rem)
+      - 6: translateX(1.5rem)
+      - 7: translateX(1.75rem)
+      - 8: translateX(2rem)
+      - 9: translateX(2.25rem)
+      - 10: translateX(2.5rem)
+      - 11: translateX(2.75rem)
+      - 12: translateX(3rem)
+      - 14: translateX(3.5rem)
+      - 16: translateX(4rem)
+      - 20: translateX(5rem)
+  - property: transform
+    class: translate-y
+    values:
+      - 0: translateY(0px)
+      - px: translateY(1px)
+      - 1: translateY(0.25rem)
+      - 2: translateY(0.5rem)
+      - 3: translateY(0.75rem)
+      - 4: translateY(1rem)
+      - 5: translateY(1.25rem)
+      - 6: translateY(1.5rem)
+      - 7: translateY(1.75rem)
+      - 8: translateY(2rem)
+      - 9: translateY(2.25rem)
+      - 10: translateY(2.5rem)
+      - 11: translateY(2.75rem)
+      - 12: translateY(3rem)
+      - 14: translateY(3.5rem)
+      - 16: translateY(4rem)
+      - 20: translateY(5rem)
+transition-property:
+  - property: transition-property
+    class: transition
+    values:
+      - none: none
+      - all: "all; <br/>transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); <br/>transition-duration: 150ms"
+      - null: "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter; <br/>transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); <br/>transition-duration: 150ms"
+      - colors: "color, background-color, border-color, text-decoration-color, fill, stroke; <br/>transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); <br/>transition-duration: 150ms"
+      - opacity: "opacity; <br/>transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br/>transition-duration: 150ms"
+      - shadow: "box-shadow; <br/>transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br/>transition-duration: 150ms"
+      - transform: "transform; <br/>transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); <br/>transition-duration: 150ms;"
+transition-duration:
+  - property: transition-duration
+    class: duration
+    values:
+      - 0: 0s
+      - 75: 75ms
+      - 100: 100ms
+      - 150: 150ms
+      - 200: 200ms
+      - 300: 300ms
+      - 500: 500ms
+      - 700: 700ms
+      - 1000: 1000ms
+transition-timing-function:
+  - property: transition-timing-function
+    class: ease
+    values:
+      - linear: linear
+      - in: cubic-bezier(0.4, 0, 1, 1)
+      - out: cubic-bezier(0, 0, 0.2, 1)
+      - in-out: cubic-bezier(0.4, 0, 0.2, 1)
+transition-delay:
+  - property: transition-delay
+    class: delay
+    values:
+      - 0: 0s
+      - 75: 75ms
+      - 100: 100ms
+      - 150: 150ms
+      - 200: 200ms
+      - 300: 300ms
+      - 500: 500ms
+      - 700: 700ms
+      - 1000: 1000ms
+container:
+  - property: width
+    class: container
+    values:
+      - null: "100%; <br/>max-width: 540px"
+      - sm: "100%; <br/>max-width: 540px"
+      - md: "100%; <br/>max-width: 720px"
+      - lg: "100%; <br/>max-width: 960px"
+      - xl: "100%; <br/>max-width: 1140px"
+      - xxl: "100%; <br/>max-width: 1320px"
+      - fluid: 100%

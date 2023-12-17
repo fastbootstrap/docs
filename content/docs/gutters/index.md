@@ -15,10 +15,6 @@ Gutters are the padding between your columns, used to responsively space and ali
 
 {{< class-api "gutter,gutter-x,gutter-y" true >}}
 
-{{< callout >}}
-The Gutters classes should be only used in the Bootstrap grid system, including `container` and `row` elements.
-{{</ callout >}}
-
 ## How they work
 
 - **Gutters are the gaps between column content, created by horizontal `padding`.** We set `padding-right` and `padding-left` on each column, and use negative `margin` to offset that at the start and end of each row to align content.
@@ -26,6 +22,10 @@ The Gutters classes should be only used in the Bootstrap grid system, including 
 - **Gutters start at `1.5rem` (`24px`) wide.** This allows us to match our grid to the [padding]({{< docsref "padding" >}}) and [margin]({{< docsref "margin" >}}) spacers scale.
 
 - **Gutters can be responsively adjusted.** Use breakpoint-specific gutter classes to modify horizontal gutters, vertical gutters, and all gutters.
+
+{{< callout discovery >}}
+The Gutters classes should be only used in the Bootstrap grid system, including `container` and `row` elements.
+{{</ callout >}}
 
 ## Horizontal gutters
 

@@ -1,5 +1,4 @@
-<link rel="stylesheet" href="{{ .Site.Params.cdn.css }}" integrity="{{ .Site.Params.cdn.css_hash }}" crossorigin="anonymous">
-
+{{ printf `<link rel="stylesheet" href="%s" integrity="%s" crossorigin="anonymous">` .Site.Params.cdn.css .Site.Params.cdn.css_hash | safeHTML}}
 {{ $targetCssPath := "/css/site.css" }}
 {{ $sassOptions := dict "targetPath" $targetCssPath "outputStyle" "expanded" "precision" 6 }}
 {{ if hugo.IsProduction }}

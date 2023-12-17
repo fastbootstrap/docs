@@ -1,4 +1,4 @@
-<script src="{{ .Site.Params.bootstrap.cdn.js_bundle }}" integrity="{{ .Site.Params.bootstrap.cdn.js_bundle_hash }}" crossorigin="anonymous"></script>
+{{ printf `<script src="%s" integrity="%s" crossorigin="anonymous"></script>` .Site.Params.bootstrap.cdn.js_bundle .Site.Params.bootstrap.cdn.js_bundle_hash  | safeHTML }}
 {{ $vendor := resources.Match "js/vendor/*.js" }}
 {{ $js := resources.Match "js/*.js" }}
 {{ $bundleJS := $vendor | append $js | resources.Concat "/assets/js/main.js" | fingerprint }}

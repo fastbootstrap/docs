@@ -15,7 +15,7 @@ Responsive avatar built with the latest Bootstrap 5. Avatar component is a visua
 
 ## Avatar examples
 
-Add `.avatar` to any `<img>` elements to make it an avatar.
+Add `.avatar` to any `<img>` element to make it an avatar.
 
 {{< example class="d-flex gap-4" >}}
 <img class="avatar" src="/images/avatar/1.jpg" />

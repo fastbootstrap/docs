@@ -10,7 +10,7 @@ menu:
 
 **Bootstrap 5 Close button component**
 
-Close button built with the latest Bootstrap 5. The close button component used for dismissing content like modals and alerts.
+Close button built with the latest Bootstrap 5. The close button component is used for dismissing content like modals and alerts.
 
 ## Close button
 
@@ -22,7 +22,7 @@ Provide an option to dismiss or close a component with `.btn-close`. Default sty
 
 ## Disabled state
 
-To disabled a close buttons by add the `disabled` attribute. We’ve also applied `pointer-events: none` and `user-select: none` to preventing hover and active states from triggering.
+You can disable a close button by adding the `disabled` attribute. We’ve also applied `pointer-events: none` and `user-select: none` to prevent hover and active states from being triggered.
 
 {{< example >}}
 <button type="button" class="btn-close" disabled aria-label="Close"></button>
@@ -38,7 +38,7 @@ Use the `.btn-close-sm` for the smaller close button.
 <button type="button" class="btn-close btn-close-sm" aria-label="Close"></button>
 {{</ example >}}
 
-Or sets CSS variables: `--bs-btn-close-width` and `--bs-btn-close-height` to customize sizes.
+Or set the `--bs-btn-close-width` and `--bs-btn-close-height` CSS variables to desired values for custom sizing.
 
 {{< example >}}
 <button type="button" class="btn-close" aria-label="Close"

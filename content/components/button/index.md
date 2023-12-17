@@ -105,12 +105,12 @@ A warning button appears before we request the user to take action, usually in a
 <button type="button" class="btn btn-warning active">Selected</button>
 {{</ example >}}
 
-### Danager button
+### Danger button
 
 The danger button appears as a final confirmation for a destructive action such as deleting. These are found mostly in confirmation modals. Just add `.btn-danger`.
 
 {{< example class="d-flex align-items-start gap-2 flex-wrap" >}}
-<button type="button" class="btn btn-danger">Danager button</button>
+<button type="button" class="btn btn-danger">Danger button</button>
 <button type="button" class="btn btn-danger" disabled>Disabled</button>
 <button type="button" class="btn btn-danger active">Selected</button>
 {{</ example >}}
@@ -152,7 +152,7 @@ Use `.btn-outline-default` for the standard button.
 
 ### More outline buttons
 
-The below outline buttons that used by Bootstrap by add `.btn-outline-*`.
+You can use the below outline buttons provided by Bootstrap by adding `.btn-outline-*`.
 
 {{< example class="d-flex align-items-start gap-2 flex-wrap" >}}
 <button type="button" class="btn btn-outline-primary">Primary</button>
@@ -170,7 +170,7 @@ The below outline buttons that used by Bootstrap by add `.btn-outline-*`.
 
 ### Disabled state
 
-Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element. Disabled buttons have `pointer-events: none` applied to, preventing hover and active states from triggering.
+Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element. Disabled buttons have `pointer-events: none` applied to them, preventing hover and active states from triggering.
 
 {{< example class="d-flex align-items-start gap-2 flex-wrap" >}}
 <button type="button" class="btn btn-primary" disabled>Disabled button</button>
@@ -338,7 +338,7 @@ If you don’t want the button text to wrap, you can add the [`.text-nowrap`]({{
 
 ## Social buttons
 
-Combining our icons and custom colors you can create social buttons. Combining our icons and custom colors you can create social buttons. 
+Combining our icons and custom colors you can create social buttons.
 
 {{< example >}}
 <a class="btn btn-primary border-0" style="background-color: #3b5998;" href="#" role="button">
@@ -361,7 +361,7 @@ Combining our icons and custom colors you can create social buttons. Combining o
 </a>
 {{</ example >}}
 
-You also can be changed by modifying a local CSS custom property `--bs-btn-bg`,`--bs-btn-hover-bg` and `--bs-btn-active-bg`. 
+You can also change a button's background color by modifying the custom local CSS properties `--bs-btn-bg`,`--bs-btn-hover-bg` and `--bs-btn-active-bg`. 
 See the [Bootstrap button variables](https://getbootstrap.com/docs/5.2/components/buttons/#variables).
 
 {{< example >}}

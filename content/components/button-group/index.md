@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Button Group
-description: "Button group component is a grouping of buttons gives users access to frequently performed, related to each other actions."
+description: "Button group component is a grouping of buttons that gives users access to frequently performed, related actions."
 toc: true
 group: actions
 menu:
@@ -10,11 +10,11 @@ menu:
 
 **Bootstrap 5 Button group component**
 
-Responsive button group built with the latest Bootstrap 5. Button group component is a series of buttons together on a single line or stack them in a vertical column.
+Responsive button group built with the latest Bootstrap 5. Button group component is a series of buttons together on a single line or stacked together on a vertical column.
 
 ## Basic button group
 
-Button groups display multiple buttons with spaces between them out evenly. Just wrap a series of buttons with `.btn` in `.btn-group`. 
+Button groups display multiple buttons with evenly distributed spaces between them. Just wrap a series of buttons with `.btn` in `.btn-group`. 
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Basic example">
@@ -59,7 +59,7 @@ Use the following button styles to show the colors only for the border of the el
 
 ## Checkbox and radio button groups
 
-Combine button-like checkbox and radio toggle buttons into a seamless looking button group.
+Combine button-like checkbox and radio toggle buttons into a seamless looking button group. There are 2 types of segmented buttons: `Single-select` and `Multi-select`.
 
 ### Single-select
 
@@ -131,7 +131,7 @@ Combine sets of button groups into button toolbars for more complex components.
 </div>
 {{</ example >}}
 
-Feel free to mix input groups with button groups in your toolbars. Similar to the example above, you’ll likely need some utilities though to space things properly.
+Feel free to mix input groups with button groups in your toolbars. Similar to the example above, you’ll likely need some utilities to space things properly.
 
 {{< example class="d-grid gap-3" >}}
 <div class="btn-toolbar" role="toolbar">
@@ -213,7 +213,7 @@ Use the `.btn-{color}` to control the appearance of the button in the button gro
 {{</ example >}}
 
 
-## Vertical stacked group
+## Vertically stacked group
 
 Use the `.btn-group-vertical` to make a set of buttons appear vertically stacked rather than horizontally. 
 
@@ -227,7 +227,7 @@ Use the `.btn-group-vertical` to make a set of buttons appear vertically stacked
 </div>
 {{</ example >}}
 
-You also can nesting the dropdown
+You can also nest dropdown elements inside button groups.
 
 {{< example >}}
 <div class="btn-group-vertical" role="group" aria-label="Vertical button group">

@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Blankslate
+title: Empty State
 description: "Blankslates are used as placeholders when there is a lack of content within a page or section."
 toc: true
 group: surfaces
@@ -15,9 +15,9 @@ Responsive blankslate built with the latest Bootstrap 5. Blankslate component is
 
 Blankslate as placeholders to tell users what can do next when there is no content has been added yet, or is temporarily empty due to the nature of the feature. 
 
-## Empty state
+## Blankslates
 
-Empty states are used when a list, table, or chart has no items or data to show. This is an opportunity to provide explanation or guidance to help merchants progress.
+Blankslates are used when a list, table, or chart has no items or data to show. This is an opportunity to provide explanation or guidance to help merchants progress.
 
 Wrap some content in the outer `.blankslate` wrapper and add the `.blankslate-heading` class to headings to give it the blankslate appearance.
 

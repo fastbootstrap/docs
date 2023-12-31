@@ -221,17 +221,17 @@ Replace the default arrow icon with a custom icon. Just remove the `.dropdown-to
 </ul>
 <div class="btn-group">
     <button type="button" class="btn btn-default">Page actions</button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
     <button 
       type="button" 
       class="btn btn-default" 
       data-bs-toggle="dropdown" 
       aria-expanded="false"
     ><i class="fa-solid fa-ellipsis"></i></button>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
-    </ul>
 </div>
 {{</ example >}}
 

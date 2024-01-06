@@ -19,14 +19,14 @@ images = ["https://fastbootstrap.com/default-preview.jpg"]
 github_org = "https://github.com/fastbootstrap"
 repo = "https://github.com/fastbootstrap/atlassian-design-for-bootstrap"
 docs_repo = "https://github.com/fastbootstrap/docs"
-current_version = "2.1.0"
+current_version = "2.2.0"
 
 [params.download]
 source = "https://github.com/fastbootstrap/atlassian-design-for-bootstrap/archive/refs/tags/v2.0.2.zip"
 
 [params.cdn]
-css = "https://cdn.jsdelivr.net/npm/fastbootstrap@2.1.0/dist/css/fastbootstrap.min.css"
-css_hash = "sha256-7gHJpsgk5BJHsd/tOfDnH0qKNCzmTMJ8zv+UYYw9CXE="
+css = "https://cdn.jsdelivr.net/npm/fastbootstrap@2.2.0/dist/css/fastbootstrap.min.css"
+css_hash = "sha256-V6lu+OdYNKTKTsVFBuQsyIlDiRWiOmtC8VQ8Lzdm2i4="
 
 [params.bootstrap.cdn]
 js_bundle = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

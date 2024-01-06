@@ -57,3 +57,15 @@ Use `shadow-none` to remove an existing box shadow from an element. This is most
 ```html
 <div class="shadow-none ..."></div>
 ```
+
+## Hover state
+
+The utility classes supports `hover` states, using the following format `.shadow-*-hover`. For example, use `shadow-lg-hover` to only apply the `shadow-lg` utility on `hover`.
+
+
+{{< example class="bg-neutral-subtler bg-grid-slate-100 text-center" show_source="false" >}}
+  <div>
+    <p class="fs-sm fw-semibold text-body-tertiary mb-3">shadow-lg-hover</p>
+    <div class="shadow shadow-lg-hover mx-auto bd-w-24 bd-h-24 bg-body rounded transition-shadow duration-300"></div>
+  </div>
+{{< /example >}}

@@ -47,7 +47,7 @@ All source code files are on [github](https://github.com/fastbootstrap/atlassian
 
 ## Package managers 
 
-### npm 
+### npm  
 
 Install with the npm package:
 

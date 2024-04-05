@@ -29,15 +29,7 @@
         </div>
         <div class="text-center mt-6 d-flex justify-content-center align-items-center">
           <span class="text-body-tertiary me-4 fs-sm">Currently <strong>v{{ .Site.Params.current_version }}</strong></span>
-          <a
-            class="github-button"
-            href="https://github.com/fastbootstrap/atlassian-design-for-bootstrap"
-            data-icon="octicon-star"
-            data-size="large"
-            data-show-count="true"
-            aria-label="Star fastbootstrap/atlassian-design-for-bootstrap on GitHub"
-            >Star</a
-          >
+          <a href="https://github.com/fastbootstrap/atlassian-design-for-bootstrap/releases" class="text-decoration-underline decoration-2">Source code</a>
         </div>
       </div>
     </section>
@@ -123,10 +115,6 @@
     </div>
   </div>
 </div>
-{{ end }}
-
-{{ define "scripts" }}
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
 {{ end }}
 
 {{ define "footer" }}
